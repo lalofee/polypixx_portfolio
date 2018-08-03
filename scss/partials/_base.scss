@@ -1,0 +1,27 @@
+body {
+    color: $body;
+    font-family: $ff-s;
+    line-height: 1.6;
+    background: $white;
+}
+
+h1 {
+    color: $quinacidrone_magenta;
+    line-height: 1;
+    font-size: 3.125rem;
+
+    span {
+        color: $quinacidrone_magenta;
+        font-family: $ff-heading;
+        display: block;
+        font-size: 5.5rem;
+        letter-spacing: $letter-spacing;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: $letter-spacing;
+    color: $black_olive;
+    line-height: 1;
+}
