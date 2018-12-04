@@ -315,9 +315,13 @@ template {
   display: none;
 }
 
+html {
+  font-size: calc(1em + 1vw);
+}
+
 body {
   font-family: "Raleway", san-serif;
-  line-height: 1.6;
+  line-height: 1.1;
 }
 
 img {
@@ -328,6 +332,11 @@ img {
   background: #fff;
 }
 
+@media screen and (min-width: 48em) {
+  html {
+    font-size: 2vw;
+  }
+}
 .welcome {
   background: #fd7379;
   height: 100vh;
@@ -350,13 +359,13 @@ img {
   grid-row: 3 / 4;
 }
 .welcome-text h4 {
-  font-size: 1.5rem;
+  font-size: .9em;
   font-weight: 300;
   color: #fff;
   display: inline;
 }
 .welcome-text h4 span {
-  font-size: 1.5rem;
+  font-size: .9em;
   font-weight: 800;
   color: #fff;
 }
@@ -367,12 +376,13 @@ img {
     grid-row-start: 2 / 3;
     -ms-flex-item-align: end;
         align-self: end;
-    padding: 0 20px;
+    min-width: 95vw;
   }
 
   .welcome-text {
     -ms-flex-item-align: start;
         align-self: start;
+    font-size: 1.5em;
   }
 }
 .about-me {
@@ -400,7 +410,7 @@ img {
   -ms-flex-item-align: end;
       align-self: end;
   color: #fff;
-  font-size: 10rem;
+  font-size: 5em;
   font-weight: 800;
   padding: 0;
   margin: 0;
@@ -414,12 +424,12 @@ img {
       align-self: center;
   color: #fff;
   padding-right: 6em;
-  font-size: 1.2rem;
+  font-size: .9em;
 }
 
 @media screen and (max-width: 48em) {
   .about-me {
-    height: 210vh;
+    height: 230vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr 5fr;
@@ -428,6 +438,7 @@ img {
   .about-img {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    min-width: 100vw;
   }
 
   .about-title {
@@ -436,10 +447,8 @@ img {
     -ms-flex-item-align: center;
         align-self: center;
     color: #fff;
-    font-size: 3.3rem;
+    font-size: 2.5em;
     font-weight: 800;
-    padding: 0;
-    margin: 0;
     line-height: 1.2;
     text-align: center;
   }
@@ -451,6 +460,6 @@ img {
     -ms-flex-item-align: start;
         align-self: start;
     color: #fff;
-    font-size: 1rem;
+    font-size: .9em;
   }
 }

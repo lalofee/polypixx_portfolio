@@ -1,6 +1,10 @@
+html {
+    font-size: calc(1em + 1vw);
+}
+
 body {
     font-family: $font-text;
-    line-height: 1.6;
+    line-height: 1.1;
 }
 
 
@@ -23,3 +27,10 @@ img {
 .portfolio {
     background: $white;
 }
+
+@media screen and (min-width: 48em) {
+    
+    html {
+      font-size: 2vw;
+    }
+  }

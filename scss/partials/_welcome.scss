@@ -18,13 +18,13 @@
     grid-row: 3 / 4; 
 
         h4 {
-            font-size: 1.5rem;
+            font-size: .9em;
             font-weight: $fw-l;
             color: $white;
             display: inline;
        
                 span {
-                    font-size: 1.5rem;
+                    font-size: .9em;
                     font-weight: $fw-b;
                     color: $white;
                 }
@@ -32,16 +32,18 @@
 }
 
 @media screen and (max-width: 48em) {
-       
+
     .welcome-logo {
         grid-column-start:1 / 4; 
         grid-row-start:2 / 3; 
         align-self: end;
-        padding: 0 20px;
+        min-width: 95vw;
+        
     }
 
     .welcome-text {
         align-self: start;
+        font-size: 1.5em;
     }
    }
 
