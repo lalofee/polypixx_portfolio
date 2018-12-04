@@ -1,0 +1,75 @@
+.about-me {
+    @include container;
+    background: $baselight;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 2fr 7fr;
+    grid-template-rows: 2fr 1fr;
+}
+   
+.about-img {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    object-fit: cover;
+}
+
+.about-title {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    align-self: end;
+    color: $white;
+    font-size: 10rem;
+    font-weight: $fw-b;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.about-text {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    align-self: center;
+    color: $white;
+    padding-right: 6em;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 48em) {
+
+    .about-me {
+        height: 210vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr 5fr; 
+    }
+       
+    
+    .about-img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    
+    .about-title {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        align-self: center;
+        color: $white;
+        font-size: 3.3rem;
+        font-weight: $fw-b;
+        padding: 0;
+        margin: 0;
+        line-height: 1.2;
+        text-align: center;
+    }
+    
+    .about-text {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        padding: 0 20px;
+        align-self: start;
+        color: $white;
+        font-size: 1rem;
+        
+    }
+    
+}

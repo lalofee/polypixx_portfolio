@@ -30,8 +30,12 @@
    */
   
   h1 {
-    font-size: 2em;
+    
     margin: 0.67em 0;
+  }
+
+  figure {
+    margin: 0;
   }
   
   /* Grouping content
@@ -48,15 +52,7 @@
     overflow: visible; /* 2 */
   }
   
-  /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
   
-  pre {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
-  }
   
   /* Text-level semantics
      ========================================================================== */
