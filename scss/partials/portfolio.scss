@@ -1,0 +1,60 @@
+.portfolio {
+    text-align: center;
+    padding: 4em 0;
+    background-image: linear-gradient(to top, #fd7379 0%, #56d2cb 100%);
+}   
+
+.portfolio h3 {
+   
+    margin: 0;
+    padding-bottom: .5em;
+    color: $white;
+    font-size: $fs-xxl;
+    font-weight: $fw-b;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.featured figcaption {
+    @include portfolio-item;
+    background: rgba(#04fd83, .6);
+}
+
+.second figcaption {
+    @include portfolio-item;
+    background: rgba(#fec7c9, .6);
+}
+
+.third figcaption {
+    @include portfolio-item;
+    background: rgba(#fd7379, .6);
+}
+
+.thourth figcaption {
+    @include portfolio-item;
+    background: rgba(#bfe6ff, .6);
+}
+
+.fith figcaption {
+    @include portfolio-item;
+    background: rgba(#028c86, .6);
+}
+
+.sixth figcaption {
+    @include portfolio-item;
+    background: rgba(#c1a4d3, .6);
+}
+
+.portfolio-title {
+   margin: 0;
+   font-weight: $fw-l;
+   font-size: $fs-ml;
+  
+}
+
+.portfolio-link {
+    margin: 0;
+}

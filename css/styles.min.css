@@ -315,30 +315,24 @@ template {
   display: none;
 }
 
-html {
-  font-size: calc(1em + 1vw);
-}
-
 body {
+  font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (1600 - 320)));
   font-family: "Raleway", san-serif;
   line-height: 1.1;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img {
   max-width: 100%;
 }
 
-.portfolio {
-  background: #fff;
-}
-
-@media screen and (min-width: 48em) {
-  html {
-    font-size: 2vw;
-  }
-}
 .welcome {
-  background: #fd7379;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fd7379), color-stop(99%, #fec7c9), to(#fec7c9));
+  background-image: linear-gradient(to top, #fd7379 0%, #fec7c9 99%, #fec7c9 100%);
   height: 100vh;
   display: grid;
   grid-template-columns: 2fr 4fr 1fr;
@@ -389,11 +383,17 @@ img {
   width: 100%;
   margin: 0 auto;
   max-width: 100vw;
-  background: #fec7c9;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#5ee7df), to(#b490ca));
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
   height: 100vh;
   display: grid;
   grid-template-columns: 3fr 2fr 7fr;
   grid-template-rows: 2fr 1fr;
+}
+.about-me::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .about-img {
@@ -424,12 +424,18 @@ img {
       align-self: center;
   color: #fff;
   padding-right: 6em;
-  font-size: .9em;
+  font-size: 0.9em;
+  margin-bottom: 2em;
 }
 
+@media screen and (max-width: 1200px) {
+  .about-text {
+    font-size: 0.9em;
+  }
+}
 @media screen and (max-width: 48em) {
   .about-me {
-    height: 230vh;
+    height: 110vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr 5fr;
@@ -447,10 +453,10 @@ img {
     -ms-flex-item-align: center;
         align-self: center;
     color: #fff;
-    font-size: 2.5em;
-    font-weight: 800;
+    padding-top: 1em;
     line-height: 1.2;
     text-align: center;
+    font-size: 2.5em;
   }
 
   .about-text {
@@ -460,6 +466,167 @@ img {
     -ms-flex-item-align: start;
         align-self: start;
     color: #fff;
-    font-size: .9em;
+    font-size: 0.9em;
   }
+}
+.portfolio {
+  text-align: center;
+  padding: 4em 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fd7379), to(#56d2cb));
+  background-image: linear-gradient(to top, #fd7379 0%, #56d2cb 100%);
+}
+
+.portfolio h3 {
+  margin: 0;
+  padding-bottom: .5em;
+  color: #fff;
+  font-size: 5em;
+  font-weight: 800;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.featured figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1.6em;
+  color: #fff;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: rgba(4, 253, 131, 0.6);
+}
+
+.second figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1.6em;
+  color: #fff;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: rgba(254, 199, 201, 0.6);
+}
+
+.third figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1.6em;
+  color: #fff;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: rgba(253, 115, 121, 0.6);
+}
+
+.thourth figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1.6em;
+  color: #fff;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: rgba(191, 230, 255, 0.6);
+}
+
+.fith figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1.6em;
+  color: #fff;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: rgba(2, 140, 134, 0.6);
+}
+
+.sixth figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1.6em;
+  color: #fff;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: rgba(193, 164, 211, 0.6);
+}
+
+.portfolio-title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 2.5em;
+}
+
+.portfolio-link {
+  margin: 0;
 }
