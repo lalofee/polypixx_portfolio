@@ -1,3 +1,6 @@
+// ############################################
+// ##### basic design plus mobile design ######
+// ############################################
 .portfolio {
     text-align: center;
     padding: 4em 0;
@@ -16,36 +19,45 @@
 .portfolio-item {
     position: relative;
     overflow: hidden;
+
+    img {
+        display: block;
+    }
+
+    &:hover figcaption,
+    &:focus figcaption {
+        top: 0;
+    }
 }
 
 .featured figcaption {
     @include portfolio-item;
-    background: rgba(#04fd83, .6);
+    background: rgba(#04fd83, .9);
 }
 
 .second figcaption {
     @include portfolio-item;
-    background: rgba(#fec7c9, .6);
+    background: rgba(#fec7c9, .8);
 }
 
 .third figcaption {
     @include portfolio-item;
-    background: rgba(#fd7379, .6);
+    background: rgba(#fd7379, .75);
 }
 
-.thourth figcaption {
+.fourth figcaption {
     @include portfolio-item;
-    background: rgba(#bfe6ff, .6);
+    background: rgba(#bfe6ff, .9);
 }
 
 .fith figcaption {
     @include portfolio-item;
-    background: rgba(#028c86, .6);
+    background: rgba(#028c86, .75);
 }
 
 .sixth figcaption {
     @include portfolio-item;
-    background: rgba(#c1a4d3, .6);
+    background: rgba(#c1a4d3, .8);
 }
 
 .portfolio-title {
@@ -57,4 +69,27 @@
 
 .portfolio-link {
     margin: 0;
+    color: $white;
+    text-decoration: none;
+    border-bottom: 2px solid $white;
+    align-self: flex-start;
+}
+
+
+// ########################
+// ##### grid design ######
+// ########################
+@supports (display: grid) {
+    .portfolio-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // you can put the class "featured" on every
+    // portfolio item and it will appear as the
+    // first item
+    .portfolio-item.featured {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
 }
