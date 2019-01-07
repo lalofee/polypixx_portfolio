@@ -18,32 +18,38 @@
     grid-row: 3 / 4; 
 
         h4 {
-            font-size: .9em;
+            // font-size: .7em;
             font-weight: $fw-l;
             color: $white;
             display: inline;
        
                 span {
-                    font-size: .9em;
                     font-weight: $fw-b;
                     color: $white;
                 }
             }
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 768px) {
+
+    .welcome {
+        grid-template-columns:8% 1fr 8%;
+        grid-template-rows: 2fr 2fr 1fr;
+    }
 
     .welcome-logo {
-        grid-column-start:1 / 4; 
-        grid-row-start:2 / 3; 
-        align-self: end;
-        min-width: 95vw;
-        
+        grid-column-start: 2 / 3; 
+        grid-row-start: 2 / 3;  
     }
 
     .welcome-text {
+        grid-column-start: 2 / 3; 
+        grid-row-start: 3 / 4; 
         align-self: start;
-        font-size: 1.5em;
+
+        h4 {
+            // font-size: 2.7em;
+        }
     }
    }
 
