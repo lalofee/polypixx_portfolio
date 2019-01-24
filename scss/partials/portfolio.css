@@ -1,0 +1,64 @@
+/*
+Error: Undefined variable: "$white".
+        on line 6 of C:\xampp\htdocs\polypixx_portfolio\scss\partials\portfolio.scss
+
+1: // ############################################
+2: // ##### basic design plus mobile design ######
+3: // ############################################
+4: .portfolio {
+5:     text-align: center;
+6:     color: $white;
+7:     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+8:     background-blend-mode: multiply,multiply;
+9: }   
+10: 
+11: .portfolio h3 {
+
+Backtrace:
+C:\xampp\htdocs\polypixx_portfolio\scss\partials\portfolio.scss:6
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+X:/programme/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+X:/programme/koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+X:/programme/koala/bin/sass:22:in `load'
+X:/programme/koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$white\".\A         on line 6 of C:\xampp\htdocs\polypixx_portfolio\scss\partials\portfolio.scss\A \A 1: // ############################################\A 2: // ##### basic design plus mobile design ######\A 3: // ############################################\A 4: .portfolio {\A 5:     text-align: center;\A 6:     color: $white;\A 7:     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; \A 8:     background-blend-mode: multiply,multiply;\A 9: }   \A 10: \A 11: .portfolio h3 {"; }

@@ -3,18 +3,27 @@
 // ############################################
 .portfolio {
     text-align: center;
-    padding: 4em 0;
-    background-image: linear-gradient(to top, #fd7379 0%, #56d2cb 100%);
+    color: $white;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+    background-blend-mode: multiply,multiply;
 }   
 
 .portfolio h3 {
-   
     margin: 0;
-    padding-bottom: .5em;
-    color: $white;
-    font-size: $fs-xxl;
+    padding: 1.5em 0 .5em 0;
+    font-size: 3em;
     font-weight: $fw-b;
 }
+
+.portfolio h5 {
+    padding-bottom: 2em;
+    font-size: .5em;
+    font-weight: $fw-l;
+}
+
+.portfolio-items {
+    padding: 0 8% 2em 8%;
+} 
 
 .portfolio-item {
     position: relative;
@@ -47,7 +56,7 @@
 
 .fourth figcaption {
     @include portfolio-item;
-    background: rgba(#bfe6ff, .9);
+    background: rgba(#bfe6ff, 10);
 }
 
 .fith figcaption {
@@ -60,20 +69,43 @@
     background: rgba(#c1a4d3, .8);
 }
 
+.seventh figcaption {
+    @include portfolio-item;
+    background: rgba(#c1a4d3, .8);
+}
+
 .portfolio-title {
    margin: 0;
-   font-weight: $fw-l;
-   font-size: $fs-ml;
-  
+   font-weight: $fw-n;
+   font-size: 1em;
+
+   .featured & {
+       font-weight: $fw-b;
+       font-size: 1.2em;
+   }
+}
+
+.portfolio-desc {
+        display: block;
+        font-weight: $fw-l;
+        font-size: .9em;  
+        
+        .featured & {
+            font-weight: $fw-n;
+        }
 }
 
 .portfolio-link {
     margin: 0;
     color: $white;
     text-decoration: none;
-    border-bottom: 2px solid $white;
-    align-self: flex-start;
+    border-bottom: 2px solid $white; 
 }
+
+.portfolio-item figcaption h2 p{
+    margin-top: 80%;
+}
+   
 
 
 // ########################
@@ -88,8 +120,8 @@
     // you can put the class "featured" on every
     // portfolio item and it will appear as the
     // first item
-    .portfolio-item.featured {
-        grid-column: 1 / span 2;
-        grid-row: 1 / span 2;
-    }
+    // .portfolio-item.featured {
+    //     grid-column: 1 / span 2;
+    //     grid-row: 1 / span 2;
+    // }
 }
