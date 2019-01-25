@@ -1,8 +1,8 @@
 .about-me {
     @include clearfix;
     // background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
-    background-image: linear-gradient(to right, #c1c161 0%, #c1c161 0%, #d4d4b1 100%);
-    // background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
+    // background-image: linear-gradient(to right, #c1c161 0%, #c1c161 0%, #d4d4b1 100%);
+    background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
     height: 100vh;
     display: grid;
     grid-template-columns: 8% 5fr .3fr 3fr  8%;

@@ -1,0 +1,88 @@
+// ############################################
+// ##### basic design plus mobile design ######
+// ############################################
+.portfolio {
+    text-align: center;
+}   
+
+.portfolio-head {
+    margin: 0;
+    color: grey;
+    line-height: .9em;
+    // padding: 1em 0 .3em 0;
+        h3 {
+            font-weight: $fw-l;
+            font-size: 3em;
+        }
+        p {
+            font-weight: $fw-n;
+            font-size: .5em;
+        }
+}
+
+.work-shots {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 8% 4fr .3fr 3fr  8%;
+    grid-template-rows: 1.5fr 5fr 1.5fr;
+    color: $white;
+}
+
+#work1 {
+    background-color: #63c3d1;
+}
+
+.work-image {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; 
+    align-self: center;
+    max-width: 800px;   
+}
+
+.work-info {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;    
+    align-self: center;
+}
+
+.work-title  {
+    font-weight: $fw-n;
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.work-desc {
+    font-weight: $fw-b;
+    font-size: .5em;
+    margin: 0;
+    padding: .3em 0 1em;
+}
+
+
+.work-text {
+    font-weight: $fw-n;
+    font-size: .5em;
+}
+
+
+
+.portfolio-desc {
+        display: block;
+        font-weight: $fw-n;
+        font-size: .9em;  
+}
+
+.portfolio-link {
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid #fff; 
+}
+
+
+
+
+// ########################
+// ##### grid design ######
+// ########################
+
