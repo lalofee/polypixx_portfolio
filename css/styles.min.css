@@ -378,8 +378,8 @@ img {
   }
 }
 .about-me {
-  background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
   height: 100vh;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
   display: grid;
   grid-template-columns: 8% 5fr .3fr 3fr  8%;
   grid-template-rows: 4fr 4fr;
@@ -402,7 +402,7 @@ img {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   align-self: center;
-  color: #fff;
+  color: #aea9a4;
   font-size: 5em;
   font-weight: 800;
   padding: 0;
@@ -414,7 +414,7 @@ img {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   align-self: start;
-  color: #fff;
+  color: #aea9a4;
   font-size: .5em;
   line-height: 1.4em;
   margin-bottom: 2em;
@@ -498,40 +498,62 @@ img {
 }
 
 .portfolio-head {
+  height: 35vh;
   margin: 0;
-  color: grey;
+  background: #56a8b4;
+  color: white;
   line-height: .9em;
+  padding: 1em 0 .3em;
 }
 .portfolio-head h3 {
   font-weight: 300;
   font-size: 3em;
+  margin: 0;
+  padding: .8em 0 .2em;
 }
 .portfolio-head p {
   font-weight: 400;
   font-size: .5em;
 }
 
-.work-shots {
+.work-presentation-1 {
   height: 100vh;
   display: grid;
-  grid-template-columns: 8% 4fr .3fr 3fr  8%;
+  grid-template-columns: 15% 4fr minmax(min-content, 0.3fr) 3fr 15%;
   grid-template-rows: 1.5fr 5fr 1.5fr;
   color: #fff;
 }
 
-#work1 {
-  background-color: #63c3d1;
-}
-
-.work-image {
+.work-image-left {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   align-self: center;
   max-width: 800px;
 }
 
-.work-info {
+.work-info-right {
   grid-column: 4 / 5;
+  grid-row: 2 / 3;
+  align-self: center;
+}
+
+.work-presentation-2 {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15% 3fr minmax(min-content, 0.3fr) 4fr 15%;
+  grid-template-rows: 1.5fr 5fr 1.5fr;
+  color: #fff;
+}
+
+.work-image-right {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+  align-self: center;
+  max-width: 800px;
+}
+
+.work-info-left {
+  grid-column: 2 / 3;
   grid-row: 2 / 3;
   align-self: center;
 }
@@ -554,15 +576,35 @@ img {
   font-size: .5em;
 }
 
-.portfolio-desc {
-  display: block;
-  font-weight: 400;
-  font-size: .9em;
+#massen {
+  background-color: #63c3d1;
 }
 
-.portfolio-link {
-  margin: 0;
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 2px solid #fff;
+#recipe {
+  background-color: #01BE86;
+}
+
+#media {
+  background-color: #fecdd1;
+}
+
+#carrental {
+  background-color: #838383;
+}
+
+#tanz {
+  background-color: #1F5967;
+}
+
+#alles {
+  background-color: #CF9860;
+}
+
+.border1 {
+  border-radius: 0 25px;
+}
+
+.border2 {
+  border: 1px solid white;
+  border-radius: 25px 0;
 }

@@ -6,13 +6,17 @@
 }   
 
 .portfolio-head {
+    height: 35vh;
     margin: 0;
-    color: grey;
+    background: #56a8b4;
+    color: white;
     line-height: .9em;
-    // padding: 1em 0 .3em 0;
+    padding: 1em 0 .3em;
         h3 {
             font-weight: $fw-l;
             font-size: 3em;
+            margin: 0;
+            padding: .8em 0 .2em;
         }
         p {
             font-weight: $fw-n;
@@ -20,27 +24,46 @@
         }
 }
 
-.work-shots {
+////// presentation with image on the left and text on the right////////
+.work-presentation-1 {
     height: 100vh;
     display: grid;
-    grid-template-columns: 8% 4fr .3fr 3fr  8%;
+    grid-template-columns: 15% 4fr minmax(min-content, .3fr) 3fr 15%;
     grid-template-rows: 1.5fr 5fr 1.5fr;
     color: $white;
 }
 
-#work1 {
-    background-color: #63c3d1;
-}
-
-.work-image {
+.work-image-left {
     grid-column: 2 / 3;
     grid-row: 2 / 3; 
     align-self: center;
     max-width: 800px;   
 }
 
-.work-info {
+.work-info-right {
     grid-column: 4 / 5;
+    grid-row: 2 / 3;    
+    align-self: center;
+}
+
+////// presentation with image on the right and text on the left////////
+.work-presentation-2 {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 15% 3fr minmax(min-content, .3fr) 4fr 15%;
+    grid-template-rows: 1.5fr 5fr 1.5fr;
+    color: $white;
+}
+
+.work-image-right {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3; 
+    align-self: center;
+    max-width: 800px;   
+}
+
+.work-info-left {
+    grid-column: 2 / 3;
     grid-row: 2 / 3;    
     align-self: center;
 }
@@ -58,26 +81,58 @@
     padding: .3em 0 1em;
 }
 
-
 .work-text {
     font-weight: $fw-n;
     font-size: .5em;
 }
 
-
-
-.portfolio-desc {
-        display: block;
-        font-weight: $fw-n;
-        font-size: .9em;  
+#massen {
+    background-color: #63c3d1;
 }
 
-.portfolio-link {
-    margin: 0;
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 2px solid #fff; 
+#recipe {
+    background-color: #01BE86;
 }
+
+#media {
+    background-color: #fecdd1;
+}
+
+#carrental {
+    background-color: #838383;
+}
+
+#tanz {
+    background-color: #1F5967;
+}
+
+#alles {
+    background-color: #CF9860;
+}
+
+.border1 {
+    
+    border-radius: 0 25px;
+   
+}
+
+.border2 {
+    border: 1px solid white;
+    border-radius: 25px 0;
+}
+
+// .portfolio-desc {
+//         display: block;
+//         font-weight: $fw-n;
+//         font-size: .9em;  
+// }
+
+// .portfolio-link {
+//     margin: 0;
+//     color: #fff;
+//     text-decoration: none;
+//     border-bottom: 2px solid #fff; 
+// }
 
 
 
