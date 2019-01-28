@@ -4,33 +4,55 @@
     display: grid;
     grid-template-columns: 2fr 4fr 1fr;
     grid-template-rows: 2fr 3fr 1fr 1fr;
+    color: $white;
 }
 
 .welcome-logo {
-    grid-column: 2 / 3; 
-    grid-row: 2 / 3; 
+    grid-column: 2; 
+    grid-row: 2; 
     justify-self: center;
     align-self: end;
+    max-width: 800px;
 }
 
 .welcome-text {
-    grid-column: 2 / 3; 
-    grid-row: 3 / 4; 
+    grid-column: 2; 
+    grid-row: 3; 
     justify-self: center;
     align-self: start;
+    font-family: $font-heading;
 
         h4 {
-            font-size: .7em;
             font-weight: $fw-l;
-            color: $white;
             display: inline;
        
                 span {
                     font-weight: $fw-b;
-                    color: $white;
                 }
             }
 }
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//////////////////        MEDIA QUERIES        //////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+//screen bigger than 1680px logo should appear more right/////
+@media screen and (min-width: 1650px) {
+    
+    .welcome-logo {
+        justify-self: end;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .welcome-text {
+        padding-top: 3%;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
 
@@ -48,11 +70,15 @@
         grid-column-start: 2 / 3; 
         grid-row-start: 3 / 4; 
         align-self: start;
+    }
+}
 
-        h4 {
-            // font-size: 2.7em;
-        }
+@media screen and (max-width: 460px) {
+
+    .welcome {
+        height: 80vh;
     }
    }
 
+  
 
