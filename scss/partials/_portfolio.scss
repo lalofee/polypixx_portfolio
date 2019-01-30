@@ -1,105 +1,105 @@
-// ############################################
-// ##### basic design plus mobile design ######
-// ############################################
-.portfolio {
-    text-align: center;
-}   
+// // ############################################
+// // ##### basic design plus mobile design ######
+// // ############################################
+// .portfolio {
+//     text-align: center;
+// }   
 
-.portfolio-head {
-    height: 35vh;
-    margin: 0;
-    background: #56a8b4;
-    color: white;
-    padding: 0;
+// .portfolio-head {
+//     height: 35vh;
+//     margin: 0;
+//     background: #56a8b4;
+//     color: white;
+//     padding: 0;
        
-    h3 {
-            font-family: $font-heading;
-            font-weight: $fw-l;
-            font-size: 7em;
-            margin: 0;
-            padding-top: .3em;
-        }
-        p {
-            font-family: $font-text;
-            font-weight: $fw-n;
-        }
-}
+//     h3 {
+//             font-family: $font-heading;
+//             font-weight: $fw-l;
+//             font-size: 7em;
+//             margin: 0;
+//             padding-top: .45em;
+//         }
+//         p {
+//             font-family: $font-text;
+//             font-weight: $fw-n;
+//         }
+// }
 
-////// work presentation ////////
-.work-presentation {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex: 0 1 auto;
-    height: 100vh;
-    padding: 0 4px;
-    color: $white;
-}
+// ////// work presentation ////////
+// .work-presentation {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//     flex: 0 1 auto;
+//     height: 100vh;
+//     padding: 0 4px;
+//     color: $white;
+// }
 
-.image-right {
+// .image-right {
 
-    .flex-image {
-        order: 2;
-    }
+//     .flex-image {
+//         order: 2;
+//     }
 
-    .flex-text {
-        order: 1;
-    }
-}
+//     .flex-text {
+//         order: 1;
+//     }
+// }
 
-.flex-image {
-    flex-basis: 800px;
-}
+// .flex-image {
+//     flex-basis: 800px;
+// }
 
-.flex-text {
-    flex-basis: 30%;
-}
+// .flex-text {
+//     flex-basis: 30%;
+// }
 
-.work-title  {
-    font-family: $font-heading;
-    font-weight: $fw-n;
-    margin: 0;
-}
+// .work-title  {
+//     font-family: $font-heading;
+//     font-weight: $fw-n;
+//     margin: 0;
+// }
 
-.work-desc {
-    font-family: $font-text;
-    font-style: italic;
-    font-weight: $fw-b;
-    margin: 0;
-    padding: .3em 0 1em;
-}
+// .work-desc {
+//     font-family: $font-text;
+//     font-style: italic;
+//     font-weight: $fw-b;
+//     margin: 0;
+//     padding: .3em 0 1em;
+// }
 
-.work-text {
-    font-family: $font-text;
-    font-weight: $fw-n;
-}
+// .work-text {
+//     font-family: $font-text;
+//     font-weight: $fw-n;
+// }
 
 ////////////////////background colors///////////////////////
-#massen {
-    background-color: #63c3d1;
-}
+// #massen {
+//     background-color: #63c3d1;
+// }
 
-#recipe {
-    background-color: #01BE86;
-}
+// #recipe {
+//     background-color: #01BE86;
+// }
 
-#media {
-    background-color: #fecdd1;
-}
+// #media {
+//     background-color: #fecdd1;
+// }
 
-#carrental {
-    background-color: #838383;
-}
+// #carrental {
+//     background-color: #838383;
+// }
 
-#tanz {
-    background-color: #1F5967;
-}
+// #tanz {
+//     background-color: #1F5967;
+// }
 
-#alles {
-    background-color: #CF9860;
-}
+// #alles {
+//     background-color: #CF9860;
+// }
 
 .border1 {
     border-radius: 0 25px;

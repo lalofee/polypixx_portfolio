@@ -8,15 +8,17 @@
     <meta name="author" content="Angela Armstorfer">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Polypixx Portfolio</title>
-    
     <!-- Custom fonts for this template -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <!-- Custom styles -->
     <link href="css/styles.min.css" rel="stylesheet">
+    <!-- styles for the scrolling letters effect -->
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo3.css" />
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 </head>
 
-<body>
+<body class="demo-3 loading">
     
     
 
@@ -63,91 +65,119 @@
             Arbeiten aus meiner Ausbildung bei der CodeFactory sowie Kundenaufträge.</p>
         </div>
 
-    
-        <div class="work-presentation" id="massen">
-            <img class="flex-image" src="img/massen.jpg" alt="screenshot">
+<!-- ////////////////////////// -->
 
-             <div class="flex-text">
-                <h3 class="work-title">Massenüberwachung</h3>
+<main>
 
-                <h4 class="work-desc">Web Design, Bootstrap</h4>
-
-                <p class="work-text">One Pager für die Junge SPÖ Wien mit Informationen zum 
-                                    "Überwachungspaket" und einem Link zur Petition von Amnesty.</p>     
-                <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
-            </div>
-        </div>
- 
-
-        <div class="work-presentation image-right" id="recipe">
-            <img class="flex-image" src="img/recipe.jpg" alt="screenshot">
-
-             <div class="flex-text">
-                <h3 class="work-title">Recipe4me</h3>
-
-                <h4 class="work-desc">UI Design / UX Design</h4>
-
-                <p class="work-text">Gruppenprojekt von vier Studentinnen der CodeFactory. Erstellt wurde eine App, 
-                    mit der man eigene Kochrezepte verwalten kann. Mittels Login System hat man Zugriff auf die 
-                    Datenbank und kann eigene Rezepte mit Bildern hochladen. Man kann die gespeicherten Rezepte 
-                    mittels eines Filters nach verschiedenen Vorgaben abrufen (vegetarisch, laktose-frei, usw.)</p>     
-                <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
-            </div>
-        </div>
-
-        <div class="work-presentation" id="media">
-                <img class="flex-image" src="img/media.jpg" alt="screenshot">
-    
-                 <div class="flex-text">
-                    <h3 class="work-title">Mediathek</h3>
-    
-                    <h4 class="work-desc">Javascript, Bootstrap</h4>
-    
-                    <p class="work-text">Arbeitsprojekt CodeFactory: Eine Mediathek, Darstellung der Medien (Bild, Titel. Autor, Beschreibung, Rating...) komplett mittels Javascript.</p>     
-                    <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
+        <div class="content">
+            <div class="content__section" data-bgcolor="#6314e0">
+                <div class="content__main">
+                    <span>Portfolio</span>
                 </div>
+                <h2 class="content__text"></h2>
             </div>
 
-            <div class="work-presentation image-right" id="carrental">
-                    <img class="flex-image" src="img/carrental.jpg" alt="screenshot">
-        
-                     <div class="flex-text">
-                        <h3 class="work-title">Car Rental</h3>
-        
-                        <h4 class="work-desc">PHP, MySQL, Bootstrap</h4>
-        
-                        <p class="work-text">Arbeitsprojekt CodeFactory: Eine Homepage für einen Autoverleih. Man sieht an welchem Standpunkt welche Autos zu leihen sind. Datenbankanbindung.</p>     
-                        <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
-                    </div>
-                </div>
 
-                <div class="work-presentation" id="tanz">
-                        <img class="flex-image border1" src="img/tanz2.jpg" alt="screenshot">
+            <div class="content__section" data-bgcolor="#63c3d1">
+                    <img class="content-image" src="img/massen.png" alt="screenshot">	
+                    <div class="flex-text">
+                            <h3 class="work-title">Junge Spö</h3>
             
-                         <div class="flex-text">
+                            <h4 class="work-desc">Web Design, Bootstrap</h4>
+            
+                            <p class="work-text">One Pager für die Junge SPÖ Wien mit Informationen zum 
+                                    "Überwachungspaket" und einem Link zur Petition von Amnesty.</p>     
+                            <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
+                        </div>				
+                    <h2 class="content__text">Junge SPÖ</h2>
+            </div>
+
+            <div class="content__section" data-bgcolor="#01BE86">
+                    <img class="content-image" src="img/recipe.png" alt="screenshot">	
+                    <div class="flex-text">
+                            <h3 class="work-title">Recipe4Me</h3>
+            
+                            <h4 class="work-desc">UI Design / UX Design</h4>
+            
+                            <p class="work-text">Gruppenprojekt von vier Studentinnen der CodeFactory. Erstellt wurde eine App, 
+                                    mit der man eigene Kochrezepte verwalten kann. Mittels Login System hat man Zugriff auf die 
+                                    Datenbank und kann eigene Rezepte mit Bildern hochladen. Man kann die gespeicherten Rezepte 
+                mittels eines Filters nach verschiedenen Vorgaben abrufen (vegetarisch, laktose-frei, usw.)</p>     
+                            <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
+                        </div>				
+                    <h2 class="content__text">Recipe4Me</h2>
+            </div>
+           
+        <div class="content__section" data-bgcolor="#fecdd1">
+                    <img class="content-image" src="img/media.png" alt="screenshot">	
+                    <div class="flex-text">
+                            <h3 class="work-title">Mediathek</h3>
+            
+                            <h4 class="work-desc">Javascript, Bootstrap</h4>
+            
+                            <p class="work-text">Arbeitsprojekt CodeFactory: Eine Mediathek, Darstellung der Medien (Bild, Titel. Autor, Beschreibung, Rating...) komplett mittels Javascript.</p>     
+                            <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
+                        </div>				
+                    <h2 class="content__text">Mediathek</h2>
+            </div>
+
+            <div class="content__section" data-bgcolor="#BF923B">
+                    <img class="content-image" src="img/carrental.png" alt="screenshot">	
+                    <div class="flex-text">
+                            <h3 class="work-title">Car Rental</h3>
+            
+                            <h4 class="work-desc">PHP, MySQL, Bootstrap</h4>
+            
+                            <p class="work-text">Arbeitsprojekt CodeFactory: Eine Homepage für einen Autoverleih. Man sieht an welchem Standpunkt welche Autos zu leihen sind. Datenbankanbindung.</p>     
+                            <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
+                        </div>				
+                    <h2 class="content__text">Car Rental</h2>
+            </div>
+
+            <div class="content__section" data-bgcolor="#1F5967">
+                    <img class="content-image" src="img/tanz.jpg" alt="screenshot">	
+                    <div class="flex-text">
                             <h3 class="work-title">Tanzstudio IGRA</h3>
             
                             <h4 class="work-desc">Fotografie, Flyerdesign</h4>
             
                             <p class="work-text">Fotografie und Flyerdesign für die Abschlussklasse des Tanzlehrgangs 2011</p>     
                             <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
-                        </div>
-                    </div>
+                        </div>				
+                    <h2 class="content__text">Tanzstudio IGRA</h2>
+            </div>
 
-                    <div class="work-presentation image-right" id="alles">
-                            <img class="flex-image border2" src="img/alles.jpg" alt="screenshot">
-                
-                             <div class="flex-text">
-                                <h3 class="work-title">Allesverwerter</h3>
-                
-                                <h4 class="work-desc">Logodesign, Visitenkarte</h4>
-                
-                                <p class="work-text">Logo- und Visitenkartenentwurf für den Sozialmarkt Allesverwerter.</p>     
-                                <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
-                            </div>
-                        </div>
+            <div class="content__section" data-bgcolor="#CF9860">
+                    <img class="content-image" src="img/alles.jpg" alt="screenshot">	
+                    <div class="flex-text">
+                            <h3 class="work-title">Allesverwerter</h3>
+            
+                            <h4 class="work-desc">Logodesign, Visitenkarte</h4>
+            
+                            <p class="work-text">Logo- und Visitenkartenentwurf für den Sozialmarkt Allesverwerter.</p>     
+                            <a class="work-link" href="https://github.com/lalofee/project_junge-spoe-wien" target="-blank">project_junge-spoe-wien</a>
+                        </div>				
+                    <h2 class="content__text">Allesverwerter</h2>
+            </div>
+            
 
-    </section>
+
+
+
+
+
+
+            <div class="content__section" data-bgcolor="">
+                <h2 class="content__text">Contact</h2>
+                <div class="content__contact">
+                    <a href="#">Twitter</a>
+                    <a href="#">Slack</a>
+                    <a href="#">sales'at'mq.com</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
 
     <!-- <section class="contact">
         <h1>Contact Me</h1>
@@ -177,7 +207,9 @@
             <p><a href="daten.html"><button class="button">Datenschutzerklärung</button></a></p>
     </footer> -->
 
-
-
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/charming.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/demo3.js"></script>
 </body>
 </html>
