@@ -1,21 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro');
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,800" rel="stylesheet');
-@import url('https://fonts.googleapis.com/css?family=Aleo');
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro:100,300,500,700|EB+Garamond:500,600,700|Open+Sans: 700');
 
-$font-logo: 'Advent Pro', sans-serif;
 
-$font-heading: 'Raleway', sans-serif;
 
-$font-text: 'Aleo', serif;
 
-$fs-s: .55em;
-$fs-m: .7em;
-$fs-l: 1.1em;
-$fs-ml: 3em;
-$fs-xxl: 5em;
+$font-heading: 'Advent Pro',
+sans-serif;
 
-$fw-l: 300;
-$fw-n: 400;
-$fw-b: 800;
+$font-sub_heading: 'EB Garamond',
+serif;
+
+$font-text: 'Open Sans',
+sans-serif;
+
+
+
+// open sans
+$fw-regular: 400;
+
+// garamond
+$fw-medium: 500;
+$fw-semi-bold: 600;
+
+// advent pro
+$fw-thin: 100;
+$fw-light: 300;
+$fw-medium: 500;
+
+// open sans, garamond, advent pro
+$fw-bold: 700;
+
+
+
+// scrolling letters //
+$font-scroll-text: 'Advent Pro',
+sans-serif;
+$fontsize-scroll-text: 8vw;
+
 
 $letter-spacing: 10px;

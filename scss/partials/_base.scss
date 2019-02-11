@@ -1,14 +1,20 @@
-// @media screen and (min-width: 50em) {
-//   html {
-//     font-size: 2vw;
-//   }
-// }
+body {
+  margin: 0 auto;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
 
 ///////////////////the fluid typography from css-tricks//////////////////
 body {
   font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 }
+
 
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
@@ -20,12 +26,14 @@ body {
   $u3: unit($min-font-size);
   $u4: unit($max-font-size);
 
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+  @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
     & {
       font-size: $min-font-size;
+
       @media screen and (min-width: $min-vw) {
         font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
+
       @media screen and (min-width: $max-vw) {
         font-size: $max-font-size;
       }
@@ -41,43 +49,3 @@ $max_font: 18px;
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
-
-body {
-  
-  margin: 0 auto;
-  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-////////////making headers responsive with modular scale//////////////
-// $mod_1: 1.2; // mobile
-// $mod_2: 1.5; // desktop
-
-// h1 {  
-//   font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem; 
-//   @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
-// }
-// h2 {  
-//   font-size: $mod_1*$mod_1*$mod_1 *1rem; 
-//   @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
-// }
-// h3 { 
-//   font-size: $mod_1*$mod_1 *1rem;
-//   @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
-// }
-
-
-
-
-
-
-* {
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-}
-
-
-
-

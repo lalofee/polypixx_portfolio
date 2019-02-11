@@ -1,114 +1,338 @@
-// // ############################################
-// // ##### basic design plus mobile design ######
-// // ############################################
-// .portfolio {
-//     text-align: center;
-// }   
+.portfolio__head {
+	height: 80vh;
+	display: grid;
+	grid-template-columns: 8% 1fr 8%;
+	grid-template-rows: 3fr 2fr;
+	text-align: center;
+}
 
-// .portfolio-head {
-//     height: 35vh;
-//     margin: 0;
-//     background: #56a8b4;
-//     color: white;
-//     padding: 0;
-       
-//     h3 {
-//             font-family: $font-heading;
-//             font-weight: $fw-l;
-//             font-size: 7em;
-//             margin: 0;
-//             padding-top: .45em;
-//         }
-//         p {
-//             font-family: $font-text;
-//             font-weight: $fw-n;
-//         }
-// }
+.portfolio__title {
+		color: #ff747a;
+		font-family: $font-heading;
+		font-size: 12em;
+		font-weight: $fw-bold;
+		margin: .5em 0 0;
+		grid-column: 2;
+		grid-row: 1;
+		align-self: end;
+		justify-self: center;
+	}
 
-// ////// work presentation ////////
-// .work-presentation {
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     align-items: center;
-//     flex: 0 1 auto;
-//     height: 100vh;
-//     padding: 0 4px;
-//     color: $white;
-// }
+.portfolio__text {
+		color: black;
+		font-family: $font-sub_heading;
+		margin: .2em 8em .5em;
+		font-size: 2em;
+		grid-column: 2;
+		grid-row: 2;
+		align-self: start;
+		justify-self: center;
+	}
 
-// .image-right {
 
-//     .flex-image {
-//         order: 2;
-//     }
+.work__title {
+	font-family: $font-sub_heading;
+	font-weight: $fw-medium;
+	font-size: 2em;
+	margin: 0;
+}
 
-//     .flex-text {
-//         order: 1;
-//     }
-// }
+.work__desc {
+	font-family: $font-text;
+	font-style: italic;
+	font-weight: $fw-regular;
+	margin: 0;
+	padding: .3em 0 1em;
+}
 
-// .flex-image {
-//     flex-basis: 800px;
-// }
+.work__text {
+	font-family: $font-text;
+	font-weight: $fw-regular;
+	color: black;
+}
 
-// .flex-text {
-//     flex-basis: 30%;
-// }
-
-// .work-title  {
-//     font-family: $font-heading;
-//     font-weight: $fw-n;
-//     margin: 0;
-// }
-
-// .work-desc {
-//     font-family: $font-text;
-//     font-style: italic;
-//     font-weight: $fw-b;
-//     margin: 0;
-//     padding: .3em 0 1em;
-// }
-
-// .work-text {
-//     font-family: $font-text;
-//     font-weight: $fw-n;
-// }
-
-////////////////////background colors///////////////////////
-// #massen {
-//     background-color: #63c3d1;
-// }
-
-// #recipe {
-//     background-color: #01BE86;
-// }
-
-// #media {
-//     background-color: #fecdd1;
-// }
-
-// #carrental {
-//     background-color: #838383;
-// }
-
-// #tanz {
-//     background-color: #1F5967;
-// }
-
-// #alles {
-//     background-color: #CF9860;
-// }
+.work__link {
+	text-decoration: none;
+	color: $white;
+}
 
 .border1 {
-    border-radius: 0 25px;
+	border-radius: 0 25px;
 }
 
 .border2 {
-    border: 1px solid white;
-    border-radius: 25px 0;
+	border: 1px solid white;
+	border-radius: 25px 0;
 }
+
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////   scrolling letters effect        /////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+
+/* Page Loader */
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #FFFAF0;
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	pointer-events: none;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: $color-link;
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5, 0.5, 1);
+	}
+}
+
+main {
+	position: relative;
+}
+
+.content {
+	position: relative;
+	display: block;
+}
+
+.content__section {
+	position: relative;
+	text-align: right;
+	padding: 0 6vmax;
+}
+
+// .content__section:first-child,
+// .content__section:last-child {
+// 	/* height: 50vh; */
+// 	text-align: left;
+// }
+
+.content__img {
+	position: relative;
+	display: block;
+	max-width: 800px;
+	margin: 0 0 0 auto;
+}
+
+.content__main,
+.content__text {
+	color: $color-scroll-text;
+	font-size: $fontsize-scroll-text;
+	font-family: $font-scroll-text;
+	margin: 0;
+	line-height: 1;
+	text-transform: lowercase;
+	// font-weight: bold;
+}
+
+.content__main,
+.content__contact {
+	position: absolute;
+	bottom: calc($fontsize-scroll-text * 1.5 + 6vmax);
+}
+
+.content__main span {
+	display: block;
+}
+
+.content__text {
+	position: absolute;
+	bottom: 6vmax;
+	left: 0;
+	padding-left: 6vmax;
+	z-index: 1000;
+	line-height: 0.8;
+}
+
+.js .ioapi .content__text {
+	position: fixed;
+	opacity: 0;
+	white-space: pre;
+}
+
+.content__text span {
+	display: inline-block;
+}
+
+.content__contact {
+	font-size: calc($fontsize-scroll-text / 2);
+	font-family: $font-scroll-text;
+}
+
+.content__contact a:last-child {
+	display: block;
+}
+
+@media screen and (max-width: 50em) {
+
+	.content__text,
+	.js.ioapi .content__text {
+		bottom: 7rem;
+	}
+
+	.content__section:first-child,
+	.content__section:last-child {
+		height: calc(100vh - 13.875em);
+	}
+
+	.content__main,
+	.content__contact {
+		bottom: calc($fontsize-scroll-text * 1.5 + 15vh);
+	}
+}
+
+
+////////////////////////////////demo3
+
+.demo-3 {
+	transition: background-color 0.4s;
+}
+
+.content__section:not(:first-child) {
+	min-height: 100vh;
+}
+
+.content__main,
+.content__contact {
+	color: $color-main-text;
+}
+
+.content__img {
+	margin: 0 auto;
+}
+
+.content__text {
+	font-weight: 300;
+}
+
+@media screen and (max-width: 50em) {
+	.content__section:not(:first-child) {
+		min-height: 0;
+	}
+}
+
+
+
+
+/////////////////////////////////////////////////////////////////
+//////////////////       button styles        //////////////////
+/////////////////////////////////////////////////////////////////
+
+/* Common button styles */
+.button {
+	min-width: 150px;
+	max-width: 250px;
+	margin: 1em;
+	padding: 1em 2em;
+	border: none;
+	background: none;
+	color: inherit;
+	position: relative;
+	z-index: 1;
+	font-size: 1em;
+	font-family: $font-sub_heading;
+	border-radius: 40px;
+	border: 2px solid;
+	text-transform: uppercase;
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+.button>span {
+	vertical-align: middle;
+}
+
+/* button styling */
+.button__styles {
+	background: none;
+	border: none;
+	height: 60px;
+}
+
+.button__styles.button--inverted,
+.button__styles.button--inverted-alt {
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button__styles>span {
+	padding-left: 0.35em;
+}
+
+.button__styles::before,
+.button__styles::after {
+	content: '';
+	z-index: -1;
+	border-radius: inherit;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+///// background color /////
+.button__styles::after {
+	background: white;
+	opacity: .3;
+}
+
+
+.button__styles::before {
+	border: 2px solid white;
+	opacity: 0;
+	-webkit-transform: scale3d(1.2, 1.2, 1);
+	transform: scale3d(1.2, 1.2, 1);
+}
+
+.button__styles:hover::before {
+	opacity: 1;
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+}
+
+.button__styles:hover::after {
+	opacity: 0;
+	-webkit-transform: scale3d(0.8, 0.8, 1);
+	transform: scale3d(0.8, 0.8, 1);
+}
+
 
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
@@ -116,71 +340,10 @@
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 
+////////screen bigger than 1650px gehts more distance on the sides/////
+@media screen and (min-width: 1650px) {
 
-
-
-//////////////////////media screen 1000px///////////////////////
-@media screen and (max-width: 1000px) {
-    
-    .portfolio-head h3 {
-        font-size: 6em;
-    }
+	.portfolio__head {
+		grid-template-columns: 12% 1fr 12%;
+	}
 }
-
-//////////////////////media screen 765px///////////////////////
-@media screen and (max-width: 765px) {
-
-    .portfolio-head h3 {
-        font-size: 5em;
-    }
-
-    .work-presentation {
-        height: auto;
-        padding: 3em 0;
-    }
-
-    .flex-image {
-        padding-bottom: 1.5em;
-    }
-}
-
-//////////////////////media screen 455px///////////////////////
-@media screen and (max-width: 455px) {
-    
-    .portfolio-head h3 {
-        font-size: 4em;
-    }
-}
-
-//////////////////////media screen 320px///////////////////////
-@media screen and (max-width: 320px) {
-    
-    .portfolio-head h3 {
-        font-size: 3em;
-    }
-
-    .portfolio-head {
-        height: 25vh;
-    }
-}
-
-// .portfolio-desc {
-//         display: block;
-//         font-weight: $fw-n;
-//         font-size: .9em;  
-// }
-
-// .portfolio-link {
-//     margin: 0;
-//     color: #fff;
-//     text-decoration: none;
-//     border-bottom: 2px solid #fff; 
-// }
-
-
-
-
-// ########################
-// ##### grid design ######
-// ########################
-
