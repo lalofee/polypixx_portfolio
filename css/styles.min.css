@@ -582,10 +582,17 @@ html {
   justify-self: center;
 }
 
+.text {
+  margin-left: 60%;
+  padding: 2em 2em 0;
+}
+
 .work__title {
   font-family: "EB Garamond", serif;
-  font-weight: 500;
-  font-size: 2em;
+  font-weight: 700;
+  font-size: 3em;
+  color: #fff;
+  opacity: .6;
   margin: 0;
 }
 
@@ -600,7 +607,7 @@ html {
 .work__text {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: black;
+  color: #fff;
 }
 
 .work__link {
@@ -909,7 +916,6 @@ main {
 .linkedin__link {
   color: #1f1818;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.5em;
   font-weight: 700;
   text-decoration: none;
 }

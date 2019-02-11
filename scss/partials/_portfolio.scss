@@ -29,11 +29,17 @@
 		justify-self: center;
 	}
 
+	.text {
+		margin-left: 60%;
+		padding: 2em 2em 0;
+	}
 
 .work__title {
 	font-family: $font-sub_heading;
-	font-weight: $fw-medium;
-	font-size: 2em;
+	font-weight: $fw-bold;
+	font-size: 3em;
+	color: $white;
+	opacity: .6;
 	margin: 0;
 }
 
@@ -48,7 +54,7 @@
 .work__text {
 	font-family: $font-text;
 	font-weight: $fw-regular;
-	color: black;
+	color: $white;;
 }
 
 .work__link {
