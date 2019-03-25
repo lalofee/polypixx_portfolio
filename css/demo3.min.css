@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300 rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro: 700');
+.demo-3{--color-text:#fff;--color-bg:#FFFAF0;--color-link:#93fbfb;--color-link-hover:#fff;--color-info:#fff;--color-main-text:#93fbfb;--color-scroll-text:#fff;--font-scroll-text:'Advent Pro',sans-serif;--fontsize-scroll-text:8vw;transition:background-color .4s}
+.content__section:not(:first-child){min-height:100vh}
+.content__contact,.content__main{color:var(--color-main-text)}
+.content__img{margin:0 auto}
+.content__text{font-weight:300}
+@media screen and (max-width:50em){
+.content__section:not(:first-child){min-height:0}
+}

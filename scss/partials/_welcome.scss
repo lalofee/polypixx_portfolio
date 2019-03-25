@@ -1,11 +1,10 @@
 .welcome {
     // background-image: linear-gradient(to top, #fd7379 0%, #fec7c9 99%, #fec7c9 100%);
     background: #bfb5d7;
-
-    height: 100vh;
+    height: 80vh;
     display: grid;
     grid-template-columns: 2fr 4fr 1fr;
-    grid-template-rows: 2fr 3fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 1fr;
     color: $white;
 }
 
@@ -34,8 +33,30 @@
     }
 }
 
-.demo-3 {
-    transition: background-color 0.4s;
+//////////////// menu //////////////////
+.menu {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    margin-left: 1.5em;
+    
+    a {
+        float: left;
+        display: block;
+        color: $black;
+        text-align: center;
+        padding: 1.5em .5em .1em;
+        text-decoration: none;
+        font-family: $font-text;
+        font-weight: $fw-bold;
+        text-transform: uppercase;
+    }
+
+    a:hover {
+        color: $white;
+        border-bottom: 2px solid white;
+        transition: .5s;
+    }
 }
 
 /////////////////////////////////////////////////////////////////

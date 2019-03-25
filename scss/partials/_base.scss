@@ -1,5 +1,11 @@
 body {
   margin: 0 auto;
+  min-height: 100vh;
+  background: #faf7eb;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: "liga" on;
 }
 
 * {
@@ -10,11 +16,11 @@ img {
   max-width: 100%;
 }
 
+
 ///////////////////the fluid typography from css-tricks//////////////////
 body {
   font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 }
-
 
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
@@ -41,6 +47,7 @@ body {
   }
 }
 
+
 $min_width: 320px;
 $max_width: 1440px;
 $min_font: 14px;
@@ -49,3 +56,5 @@ $max_font: 18px;
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
+
+

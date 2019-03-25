@@ -312,6 +312,12 @@ template {
 
 body {
   margin: 0 auto;
+  min-height: 100vh;
+  background: #faf7eb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" on;
 }
 
 * {
@@ -342,11 +348,11 @@ html {
 
 .welcome {
   background: #bfb5d7;
-  height: 100vh;
+  height: 80vh;
   display: grid;
   grid-template-columns: 2fr 4fr 1fr;
-  grid-template-rows: 2fr 3fr 1fr 1fr;
-  color: #fff;
+  grid-template-rows: 1fr 3fr 1fr 1fr;
+  color: #faf7eb;
 }
 
 .welcome__logo {
@@ -372,8 +378,27 @@ html {
   font-weight: 700;
 }
 
-.demo-3 {
-  transition: background-color 0.4s;
+.menu {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  margin-left: 1.5em;
+}
+.menu a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 1.5em .5em .1em;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.menu a:hover {
+  color: #faf7eb;
+  border-bottom: 2px solid white;
+  transition: .5s;
 }
 
 @media screen and (min-width: 1650px) {
@@ -409,18 +434,18 @@ html {
   }
 }
 .about__me {
-  background: white;
+  background: #faf7eb;
   height: 100vh;
   display: grid;
   grid-template-columns: 8% 4fr 2fr 8%;
-  grid-template-rows: 5fr 4fr;
-  color: black;
+  grid-template-rows: 6% 1fr 1.5fr 6%;
+  color: #000000;
 }
 
 .about__img {
   grid-column: 3;
-  grid-row: 1 / 3;
-  max-height: 80%;
+  grid-row: 2 / 5;
+  max-height: 78%;
   object-fit: cover;
   align-self: end;
   justify-self: end;
@@ -428,66 +453,32 @@ html {
 
 .about__title {
   grid-column: 2;
-  grid-row: 1 / 2;
-  align-self: center;
-  font-family: "Advent Pro", sans-serif;
-  font-size: 12em;
-  line-height: 1em;
-  font-weight: 700;
+  grid-row: 2 / 3;
+  align-self: end;
   padding-top: 10%;
   margin: 0;
+  font-family: "Advent Pro", sans-serif;
+  text-transform: uppercase;
+  font-size: 8em;
+  line-height: .8em;
+  font-weight: 700;
   opacity: .6;
+}
+.about__title span {
+  color: #FF747A;
 }
 
 .about__text {
   grid-column: 2;
-  grid-row: 2 / 3;
-  align-self: start;
-  font-family: "Open Sans", sans-serif;
+  grid-row: 3 / 4;
+  align-self: end;
   text-align: justify;
-  line-height: 1.4em;
-  margin-bottom: 2em;
-  padding: 0 6em 0 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 @media screen and (min-width: 1650px) {
   .about__me {
     grid-template-columns: 12% 4fr 2fr 12%;
-  }
-}
-@media screen and (max-width: 1720px) {
-  .about__title {
-    font-size: 8em;
-  }
-}
-@media screen and (max-width: 1570px) {
-  .about__me {
-    grid-template-columns: 8% 3fr 3fr 8%;
-    grid-template-rows: 5fr 4fr;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .about__me {
-    grid-template-columns: 8% 4fr 2fr 8%;
-    grid-template-rows: 3fr .5fr 5fr;
-  }
-
-  .about__title {
-    grid-column: 2 / 4;
-    grid-row: 1 / 3;
-    align-self: end;
-    font-size: 7em;
-  }
-
-  .about__text {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-    align-self: center;
-  }
-
-  .about__img {
-    grid-column: 3 / 4;
-    grid-row: 1 / 4;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -555,14 +546,19 @@ html {
   height: 80vh;
   display: grid;
   grid-template-columns: 8% 1fr 8%;
-  grid-template-rows: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
   text-align: center;
+  background: #000000;
+}
+
+#first__section {
+  padding-top: 6em;
 }
 
 .portfolio__title {
-  color: #ff747a;
+  color: #faf7eb;
   font-family: "Advent Pro", sans-serif;
-  font-size: 12em;
+  font-size: 8em;
   font-weight: 700;
   margin: .5em 0 0;
   grid-column: 2;
@@ -572,7 +568,7 @@ html {
 }
 
 .portfolio__text {
-  color: black;
+  color: #FF747A;
   font-family: "EB Garamond", serif;
   margin: .2em 8em .5em;
   font-size: 2em;
@@ -591,7 +587,7 @@ html {
   font-family: "EB Garamond", serif;
   font-weight: 700;
   font-size: 3em;
-  color: #fff;
+  color: #faf7eb;
   opacity: .6;
   margin: 0;
 }
@@ -607,12 +603,12 @@ html {
 .work__text {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: #fff;
+  color: #faf7eb;
 }
 
 .work__link {
   text-decoration: none;
-  color: #fff;
+  color: #faf7eb;
 }
 
 .border1 {
@@ -670,14 +666,14 @@ main {
 .content__section {
   position: relative;
   text-align: right;
-  padding: 0 6vmax;
+  padding: 0 8%;
 }
 
 .content__img {
   position: relative;
   display: block;
   max-width: 800px;
-  margin: 0 0 0 auto;
+  margin: 0 8% 0 auto;
 }
 
 .content__main,
@@ -774,7 +770,7 @@ main {
 .button {
   min-width: 150px;
   max-width: 250px;
-  margin: 1em;
+  margin-top: 1em;
   padding: 1em 2em;
   border: none;
   background: none;
@@ -875,7 +871,7 @@ main {
 }
 
 .contact__title {
-  color: #ff747a;
+  color: #FF747A;
   font-family: "Advent Pro", sans-serif;
   font-size: 12em;
   font-weight: 700;
@@ -887,7 +883,7 @@ main {
 }
 
 .contact__text {
-  color: black;
+  color: #000000;
   font-family: "EB Garamond", serif;
   margin: .2em 8em .5em;
   font-size: 2em;
@@ -901,33 +897,59 @@ main {
   grid-column: 2/3;
   grid-row: 3;
 }
-
-.email__title,
-.github__title,
-.linkedin__title {
-  color: #fff;
-  font-family: "EB Garamond", serif;
-  font-size: 4em;
-  margin: 0  0 .5em;
-}
-
-.email__link,
-.github__link,
-.linkedin__link {
-  color: #1f1818;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  text-decoration: none;
+.contact__email__column a:hover {
+  color: #faf7eb;
+  border-bottom: 2px solid white;
+  transition: 1s;
 }
 
 .contact__github__column {
   grid-column: 3/4;
   grid-row: 3;
 }
+.contact__github__column a:hover {
+  color: #faf7eb;
+  border-bottom: 2px solid white;
+  transition: 1s;
+}
 
 .contact__linkedin__column {
   grid-column: 4/5;
   grid-row: 3;
+}
+.contact__linkedin__column a:hover {
+  color: #faf7eb;
+  border-bottom: 2px solid white;
+  transition: 1s;
+}
+
+.email__title,
+.github__title,
+.linkedin__title {
+  color: #faf7eb;
+  font-family: "EB Garamond", serif;
+  font-size: 4em;
+  margin: 0 0 .5em;
+}
+
+.email__link,
+.github__link,
+.linkedin__link {
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer {
+  height: 5em;
+  color: #faf7eb;
+  text-align: center;
+  background: #000000;
+}
+.footer p {
+  padding: 1.6em 0;
+  opacity: .4;
 }
 
 .adress {
