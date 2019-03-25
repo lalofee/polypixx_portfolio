@@ -8,7 +8,9 @@ body {
     -moz-font-feature-settings: "liga" on;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 

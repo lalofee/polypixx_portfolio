@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 8% 1fr 1fr 1fr 8%;
     grid-template-rows: 4fr 2fr 2fr 1fr;
+    grid-gap: 20px;
     text-align: center;
 }
 
@@ -21,7 +22,8 @@
 .contact__text {
     color: $black;
     font-family: $font-sub_heading;
-    margin: .2em 8em .5em;
+    text-align: center;
+    margin: 1em;
     font-size: 2em;
     grid-column: 2/5;
     grid-row: 2;
@@ -32,6 +34,7 @@
 .contact__email__column {
     grid-column: 2/3;
     grid-row: 3;
+    text-align: center;
 
     a:hover {
         color: $white;
@@ -43,6 +46,7 @@
 .contact__github__column {
     grid-column: 3/4;
     grid-row: 3;
+    text-align: center;
 
     a:hover {
         color: $white;
@@ -54,6 +58,7 @@
 .contact__linkedin__column {
     grid-column: 4/5;
     grid-row: 3;
+    text-align: center;
 
     a:hover {
         color: $white;
@@ -86,11 +91,13 @@
     height: 5em;  
     color: $white;
     text-align: center;
+    
     background: $black;
 
     p {
-        padding: 1.6em 0;
+        padding: 1.9em 0;
         opacity: .4;
+        margin: 0;
     }
 }
 
