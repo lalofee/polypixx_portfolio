@@ -439,18 +439,10 @@ html {
   background: #faf7eb;
   height: 100vh;
   display: grid;
-  grid-template-columns: 8% 4fr 2fr 8%;
+  grid-template-columns: minmax(0, 8%) minmax(0, 4fr) minmax(0, 2fr) minmax(0, 8%);
   grid-template-rows: 6% 1fr 1.5fr 6%;
+  grid-gap: 1em;
   color: #000000;
-}
-
-.about__img {
-  grid-column: 3;
-  grid-row: 2 / 5;
-  max-height: 78%;
-  object-fit: cover;
-  align-self: end;
-  justify-self: end;
 }
 
 .about__title {
@@ -478,70 +470,37 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 
+.about__img {
+  grid-column: 3;
+  grid-row: 2 / 5;
+  max-height: 78%;
+  object-fit: cover;
+  align-self: end;
+  justify-self: end;
+}
+
 @media screen and (min-width: 1650px) {
   .about__me {
     grid-template-columns: 12% 4fr 2fr 12%;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
+  .about__title {
+    font-size: 7em;
+  }
+}
+@media screen and (max-width: 1500px) {
   .about__title {
     font-size: 6em;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
   .about__title {
     font-size: 5em;
   }
-}
-@media screen and (max-width: 768px) {
-  .about__me {
-    height: 125vh;
-    display: grid;
-    grid-template-columns: 8% 1fr 8%;
-    grid-template-rows: 2fr 5fr;
-  }
 
-  .about__title {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    font-size: 4em;
-    line-height: 1.2;
-  }
-
-  .about__text {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    padding: 0;
-    float: left;
-    width: 50%;
-  }
-
-  .about__img {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    width: 50%;
-  }
-}
-@media screen and (max-width: 490px) {
-  .about__me {
-    height: auto;
-  }
-}
-@media screen and (max-width: 320px) {
-  .about__me {
-    height: auto;
-  }
-
-  .about__title {
-    font-size: 2.6em;
-  }
-
-  .about__text {
-    width: 100%;
-  }
-
-  .about__image {
-    display: none;
+  .about-img {
+    max-height: 60%;
   }
 }
 .portfolio {
@@ -585,7 +544,7 @@ html {
 }
 
 .text {
-  margin-left: 60%;
+  margin-left: 55%;
   padding: 2em 2em 0;
 }
 
@@ -624,6 +583,8 @@ html {
 .border2 {
   border: 1px solid white;
   border-radius: 25px 0;
+  margin-top: 9em;
+  margin-right: 2em;
 }
 
 /* Common button styles */
