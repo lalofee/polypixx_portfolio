@@ -355,7 +355,6 @@ html {
   grid-gap: 10px;
   grid-template-rows: auto;
   background: #cddddd;
-  z-index: 3;
 }
 
 .welcome__background {
@@ -365,10 +364,7 @@ html {
   height: 90vh;
   display: block;
   position: relative;
-}
-
-.welcome__background > * {
-  z-index: 2;
+  overflow: hidden;
 }
 
 .welcome__logo {
@@ -385,7 +381,7 @@ html {
   align-self: start;
   font-family: "Open Sans", sans-serif;
   color: #faf7eb;
-  z-index: 3;
+  z-index: 4;
 }
 .welcome__text h4 {
   font-weight: 400;
@@ -406,7 +402,7 @@ html {
   line-height: .8em;
   font-weight: 700;
   opacity: .6;
-  z-index: 3;
+  z-index: 5;
 }
 .about__title span {
   color: #FF747A;

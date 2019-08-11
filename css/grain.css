@@ -1,6 +1,4 @@
-.welcome__background > * {
-    z-index: 2;
-}
+
 
 .welcome__background:after {
     -webkit-animation: grain 8s steps(10) infinite;
@@ -10,12 +8,15 @@
     display: block;
     height: 300%;
     left: -50%;
-    position: fixed;
+    position: absolute;
     width: 200%;
     top: -120%;
     opacity: 0.3; 
-    overflow: hidden;
-  z-index: 1;
+    z-index: 1;
+}
+
+.welcome__background > * {
+  z-index: 2;
 }
 
 @-webkit-keyframes grain {
