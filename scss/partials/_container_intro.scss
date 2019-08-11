@@ -1,0 +1,111 @@
+.container_intro {
+    // height: 200vh;
+    // width: 100vw;
+    display: grid;
+    grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: auto;
+    background: #cddddd;
+}
+// top-background
+.welcome__background {
+    background-image: linear-gradient(15deg, #0E8D94 0%, #167C80 50%, #055A5B 100%);    
+    // background-color: #477E87;
+    grid-column: 1/-1;
+    grid-row: 1/8;
+    height: 90vh;
+    display: block;
+    position: relative;
+}
+
+
+// POLYPIXX-LOGO
+.welcome__logo {
+    // max-width: 800px;
+    grid-column: 9/14;
+    grid-row: 1/5;
+    justify-self: end;
+    margin-top: 5vh;
+}
+
+.welcome__text {
+    grid-column: 9/12;
+    grid-row: 5/6;
+    align-self: start;
+    font-family: $font-text;
+    color: $white;
+    h4 {
+        font-weight: $fw-regular;
+        display: inline;
+
+        span {
+            font-weight: $fw-bold;
+        }
+    }
+}
+// WEB-DESIGN+FOTO-GRAFIE
+.about__title {
+    grid-column: 2/10;
+    grid-row: 7/13;    
+    margin: 0;
+    padding: 0;
+    font-size: 12vw;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    line-height: .8em;
+    font-weight: $fw-bold;
+    opacity: .6;
+    span {
+        color: $base;
+    }
+}
+
+.about__text {
+    grid-column: 3/9;
+    grid-row: 13/16;
+    font-family: $font-text;
+    margin-top: 5vh;
+}
+
+
+
+.about__img {
+    grid-column: 10/14;
+    grid-row: 15/18;
+}
+   
+    
+ @media only screen and (max-width: 1400px) {
+    
+    .welcome_background {
+        min-height: 86vh;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    
+    .welcome_background {
+        min-height: 70vh;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    
+    .welcome_background {
+        min-height: 60vh;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    
+    .welcome_background {
+        min-height: 50vh;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    
+    .welcome_background {
+        min-height: 20vh;
+    }
+  }

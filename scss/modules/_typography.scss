@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro:100,300,500,700|EB+Garamond:500,600,700|Open+Sans: 700');
 
+$col: calc((1200px - (11 * 10px)) / 12); /*($wrapperWidth - ($numberOfGutters * $gutterWidth)) / $numberOfColumns */
 
 
 

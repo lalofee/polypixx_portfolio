@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Advent+Pro:100,300,500,700|EB+Garamond:500,600,700|Open+Sans: 700");
+/*($wrapperWidth - ($numberOfGutters * $gutterWidth)) / $numberOfColumns */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -313,11 +314,6 @@ template {
 body {
   margin: 0 auto;
   min-height: 100vh;
-  background: #faf7eb;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  -moz-font-feature-settings: "liga" on;
 }
 
 *,
@@ -330,47 +326,66 @@ img {
   max-width: 100%;
 }
 
+.underline {
+  border-bottom: 30px solid #feabaf;
+  display: inline-block;
+}
+
 body {
   font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 }
 
 html {
-  font-size: 14px;
+  font-size: 12px;
 }
 @media screen and (min-width: 320px) {
   html {
-    font-size: calc(14px + 4 * ((100vw - 320px) / 1120));
+    font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
   }
 }
 @media screen and (min-width: 1440px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
-.welcome {
-  background: #bfb5d7;
-  height: 80vh;
+.container_intro {
   display: grid;
-  grid-template-columns: 2fr 4fr 1fr;
-  grid-template-rows: 1fr 3fr 1fr 1fr;
-  color: #faf7eb;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
+  grid-gap: 10px;
+  grid-template-rows: auto;
+  background: #cddddd;
+  z-index: 3;
+}
+
+.welcome__background {
+  background-image: linear-gradient(15deg, #0E8D94 0%, #167C80 50%, #055A5B 100%);
+  grid-column: 1/-1;
+  grid-row: 1/8;
+  height: 90vh;
+  display: block;
+  position: relative;
+}
+
+.welcome__background > * {
+  z-index: 2;
 }
 
 .welcome__logo {
-  grid-column: 2;
-  grid-row: 2;
-  justify-self: center;
-  align-self: end;
-  max-width: 800px;
+  grid-column: 9/14;
+  grid-row: 1/5;
+  justify-self: end;
+  margin-top: 5vh;
+  z-index: 3;
 }
 
 .welcome__text {
-  grid-column: 2;
-  grid-row: 3;
-  justify-self: center;
+  grid-column: 9/12;
+  grid-row: 5/6;
   align-self: start;
   font-family: "Open Sans", sans-serif;
+  color: #faf7eb;
+  z-index: 3;
 }
 .welcome__text h4 {
   font-weight: 400;
@@ -380,179 +395,93 @@ html {
   font-weight: 700;
 }
 
-.menu {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  margin-left: 1.5em;
-}
-.menu a {
-  float: left;
-  display: block;
-  color: #000000;
-  text-align: center;
-  padding: 1.5em .5em .1em;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.menu a:hover {
-  color: #faf7eb;
-  border-bottom: 2px solid white;
-  transition: .5s;
-}
-
-@media screen and (min-width: 1650px) {
-  .welcome__logo {
-    justify-self: end;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .welcome__text {
-    padding-top: 3%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .welcome {
-    grid-template-columns: 8% 1fr 8%;
-    grid-template-rows: 2fr 2fr 1fr;
-  }
-
-  .welcome__logo {
-    grid-column-start: 2 / 3;
-    grid-row-start: 2 / 3;
-  }
-
-  .welcome__text {
-    grid-column-start: 2 / 3;
-    grid-row-start: 3 / 4;
-    align-self: start;
-  }
-}
-@media screen and (max-width: 460px) {
-  .welcome {
-    height: 80vh;
-  }
-}
-.about__me {
-  background: #faf7eb;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: minmax(0, 8%) minmax(0, 4fr) minmax(0, 2fr) minmax(0, 8%);
-  grid-template-rows: 6% 1fr 1.5fr 6%;
-  grid-gap: 1em;
-  color: #000000;
-}
-
 .about__title {
-  grid-column: 2;
-  grid-row: 2 / 3;
-  align-self: end;
-  padding-top: 10%;
+  grid-column: 2/10;
+  grid-row: 7/13;
   margin: 0;
+  padding: 0;
+  font-size: 12vw;
   font-family: "Advent Pro", sans-serif;
   text-transform: uppercase;
-  font-size: 8em;
   line-height: .8em;
   font-weight: 700;
   opacity: .6;
+  z-index: 3;
 }
 .about__title span {
   color: #FF747A;
 }
 
 .about__text {
-  grid-column: 2;
-  grid-row: 3 / 4;
-  align-self: end;
-  text-align: justify;
+  grid-column: 3/9;
+  grid-row: 13/16;
   font-family: "Open Sans", sans-serif;
+  margin-top: 5vh;
 }
 
 .about__img {
-  grid-column: 3;
-  grid-row: 2 / 5;
-  max-height: 78%;
-  object-fit: cover;
-  align-self: end;
-  justify-self: end;
+  grid-column: 10/14;
+  grid-row: 15/18;
 }
 
-@media screen and (min-width: 1650px) {
-  .about__me {
-    grid-template-columns: 12% 4fr 2fr 12%;
+@media only screen and (max-width: 1400px) {
+  .welcome_background {
+    min-height: 86vh;
   }
 }
-@media screen and (max-width: 1600px) {
-  .about__title {
-    font-size: 7em;
+@media only screen and (max-width: 1200px) {
+  .welcome_background {
+    min-height: 70vh;
   }
 }
-@media screen and (max-width: 1500px) {
-  .about__title {
-    font-size: 6em;
+@media only screen and (max-width: 900px) {
+  .welcome_background {
+    min-height: 60vh;
   }
 }
-@media screen and (max-width: 1400px) {
-  .about__title {
-    font-size: 5em;
-  }
-
-  .about-img {
-    max-height: 60%;
+@media only screen and (max-width: 600px) {
+  .welcome_background {
+    min-height: 50vh;
   }
 }
-.portfolio {
-  position: relative;
+@media only screen and (max-width: 400px) {
+  .welcome_background {
+    min-height: 20vh;
+  }
 }
-
 .portfolio__head {
-  height: 80vh;
+  margin-top: 20vh;
   display: grid;
-  grid-template-columns: 8% 1fr 8%;
-  grid-template-rows: 1fr 1fr;
-  text-align: center;
-  background: #000000;
-}
-
-#first__section {
-  padding-top: 6em;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
+  grid-gap: 10px;
+  grid-template-rows: auto;
 }
 
 .portfolio__title {
-  color: #faf7eb;
+  color: #525858;
   font-family: "Advent Pro", sans-serif;
-  font-size: 8em;
+  margin: 0;
+  font-size: 10vw;
   font-weight: 700;
-  margin: .5em 0 0;
-  grid-column: 2;
-  grid-row: 1;
-  align-self: end;
-  justify-self: center;
+  grid-column: 2/9;
+  grid-row: 1/3;
 }
 
 .portfolio__text {
-  color: #FF747A;
+  color: #000000;
   font-family: "EB Garamond", serif;
-  margin: .2em 8em .5em;
-  font-size: 2em;
-  grid-column: 2;
-  grid-row: 2;
-  align-self: start;
-  justify-self: center;
-}
-
-.text {
-  margin-left: 55%;
-  padding: 2em 2em 0;
+  margin: 0;
+  font-size: 1.5em;
+  grid-column: 2/8;
+  grid-row: 3/4;
+  align-self: end;
 }
 
 .work__title {
   font-family: "EB Garamond", serif;
   font-weight: 700;
   font-size: 3em;
-  color: #faf7eb;
+  color: #000000;
   opacity: .6;
   margin: 0;
 }
@@ -568,12 +497,12 @@ html {
 .work__text {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: #faf7eb;
+  color: #000000;
 }
 
 .work__link {
   text-decoration: none;
-  color: #faf7eb;
+  color: #000000;
 }
 
 .border1 {
@@ -678,13 +607,7 @@ html {
   transform: scale3d(0.8, 0.8, 1);
 }
 
-@media screen and (min-width: 1650px) {
-  .portfolio__head {
-    grid-template-columns: 12% 1fr 12%;
-  }
-}
 .contact {
-  height: 80vh;
   display: grid;
   grid-template-columns: 8% 1fr 1fr 1fr 8%;
   grid-template-rows: 4fr 2fr 2fr 1fr;
