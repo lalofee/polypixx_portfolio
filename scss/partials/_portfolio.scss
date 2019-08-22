@@ -56,30 +56,19 @@
 	grid-column: 3/6;
 	grid-row: 4/5;
 	justify-self: start;
-	font-family: $font-sub_heading;
-	font-weight: $fw-bold;
-	font-size: 3em;
-	color: $black;
-	opacity: .6;
-	margin: 0;
+	@include work__title__style;
 }
 .massen__desc {
 	grid-column: 3/6;
 	grid-row: 5/6;
 	justify-self: start;
-	font-family: $font-text;
-	font-style: italic;
-	font-weight: $fw-regular;
-	margin: 1em;
-	// padding: .3em 0 1em;
+	@include work__desc__style;
 }
 .massen__text {
 	grid-column: 3/6;
 	grid-row: 6/7;
 	justify-self: start;
-	font-family: $font-text;
-	font-weight: $fw-regular;
-	color: $black;
+	@include work__text__style;
 }
 .massen__button {
 	grid-column: 3/6;
@@ -91,51 +80,77 @@
 /////////////////FRISEURAKADEMIE///////////////////////	
 .friseur__background {
 	grid-column: 1/12;
-	grid-row: 10/18;
-	 background-color: #FAB989;
+	grid-row: 9/17;
+	background-color: #FAB989;
 }
 .friseur__img {
 	grid-column: 2/10;
-	grid-row: 10/18;
-	justify-self: start;
+	grid-row: 9/17;
+	justify-self: end;
 }
 .friseur__title {
 	grid-column: 10/13;
-	grid-row: 13/14;
+	grid-row: 12/13;
 	justify-self: end;
-	font-family: $font-sub_heading;
-	font-weight: $fw-bold;
-	font-size: 3em;
-	color: $black;
-	opacity: .6;
-	margin: 0;
+	@include work__title__style;
 }
 .friseur__desc {
 	grid-column: 10/13;
-	grid-row: 14/15;
+	grid-row: 13/14;
 	justify-self: end;
-	font-family: $font-text;
-	font-style: italic;
-	font-weight: $fw-regular;
-	margin: 1em;
 	text-align: right;
-
+    @include work__desc__style;
 }
 .friseur__text {
 	grid-column: 10/13;
-	grid-row: 15/16;
+	grid-row: 14/15;
 	justify-self: end;
-	font-family: $font-text;
-	font-weight: $fw-regular;
-	color: $black;
 	text-align: right;
-
+	@include work__text__style;
 }
 .friseur__button {
 	grid-column: 10/13;
-	grid-row: 16/17;
+	grid-row: 15/16;
 	justify-self: end;
 }
+
+/////////////////RECIPE///////////////////////	
+.recipe__background {
+	grid-column: 4/-1;
+	grid-row: 17/25;
+	background-color: #d4f8dc;
+}
+.recipe__img {
+	grid-column: 5/14;
+	grid-row: 17/25;
+	justify-self: start;
+}
+.recipe__title {
+	grid-column: 3/6;
+	grid-row: 20/21;
+	justify-self: start;
+	@include work__title__style;
+}
+.recipe__desc {
+	grid-column: 3/6;
+	grid-row: 21/22;
+	justify-self: start;
+	text-align: left;
+    @include work__desc__style;
+}
+.recipe__text {
+	grid-column: 3/6;
+	grid-row: 22/23;
+	justify-self: start;
+	text-align: left;
+	@include work__text__style;
+}
+.recipe__button {
+	grid-column: 3/6;
+	grid-row: 23/24;
+	justify-self: start;
+}
+
 
 
 // Border of IGRA and Allesverwerter

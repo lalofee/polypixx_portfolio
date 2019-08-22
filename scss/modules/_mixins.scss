@@ -1,0 +1,22 @@
+// styles for work examples in the portfolio/work section
+@mixin work__title__style {
+    font-family: $font-sub_heading;
+	font-weight: $fw-bold;
+	font-size: 3em;
+	color: $black;
+	opacity: .6;
+	margin: 0;
+}
+
+@mixin work__desc__style {
+    font-family: $font-text;
+	font-style: italic;
+	font-weight: $fw-regular;
+	margin: 1em;
+}
+
+@mixin work__text__style {
+    font-family: $font-text;
+	font-weight: $fw-regular;
+	color: $black;
+}

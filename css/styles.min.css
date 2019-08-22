@@ -514,19 +514,19 @@ img {
 
 .friseur__background {
   grid-column: 1/12;
-  grid-row: 10/18;
+  grid-row: 9/17;
   background-color: #FAB989;
 }
 
 .friseur__img {
   grid-column: 2/10;
-  grid-row: 10/18;
-  justify-self: start;
+  grid-row: 9/17;
+  justify-self: end;
 }
 
 .friseur__title {
   grid-column: 10/13;
-  grid-row: 13/14;
+  grid-row: 12/13;
   justify-self: end;
   font-family: "EB Garamond", serif;
   font-weight: 700;
@@ -538,29 +538,80 @@ img {
 
 .friseur__desc {
   grid-column: 10/13;
-  grid-row: 14/15;
+  grid-row: 13/14;
   justify-self: end;
+  text-align: right;
   font-family: "Open Sans", sans-serif;
   font-style: italic;
   font-weight: 400;
   margin: 1em;
-  text-align: right;
 }
 
 .friseur__text {
   grid-column: 10/13;
-  grid-row: 15/16;
+  grid-row: 14/15;
   justify-self: end;
+  text-align: right;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #021f21;
-  text-align: right;
 }
 
 .friseur__button {
   grid-column: 10/13;
-  grid-row: 16/17;
+  grid-row: 15/16;
   justify-self: end;
+}
+
+.recipe__background {
+  grid-column: 4/-1;
+  grid-row: 17/25;
+  background-color: #d4f8dc;
+}
+
+.recipe__img {
+  grid-column: 5/14;
+  grid-row: 17/25;
+  justify-self: start;
+}
+
+.recipe__title {
+  grid-column: 3/6;
+  grid-row: 20/21;
+  justify-self: start;
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+  font-size: 3em;
+  color: #021f21;
+  opacity: .6;
+  margin: 0;
+}
+
+.recipe__desc {
+  grid-column: 3/6;
+  grid-row: 21/22;
+  justify-self: start;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  margin: 1em;
+}
+
+.recipe__text {
+  grid-column: 3/6;
+  grid-row: 22/23;
+  justify-self: start;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #021f21;
+}
+
+.recipe__button {
+  grid-column: 3/6;
+  grid-row: 23/24;
+  justify-self: start;
 }
 
 .border1 {
