@@ -1,21 +1,42 @@
-$black: #000000;
+$black: #021f21;
 
-$white: #faf7eb;
+$white: #f2f9f9;  
 
 // main color sheme  //
 
-$color1: rgba(71, 126, 135, 1);
-$color2: rgba(255, 116, 122, 1);
-$color3: rgba(172, 189, 186, 1);
-$color4: rgba(205, 221, 221, 1);
-$color5: rgba(79, 58, 75, 1);
+$main-color: #0E8D94;
+$main-color-lightest: lighten($main-color, 20%);
+$main-color-lighter:  lighten($main-color, 15%);
+$main-color-light:    lighten($main-color, 10%);
+
+$main-color-dark:     darken($main-color, 40%);
+$main-color-darker:   darken($main-color, 50%);
+$main-color-darkest:  darken($main-color, 60%);
+
+$logo-color: #FF747A;  
+$logo-color-lightest: lighten($logo-color, 20%);
+$logo-color-lighter:  lighten($logo-color, 15%);
+$logo-color-light:    lighten($logo-color, 10%);
+
+$logo-color-dark:     darken($logo-color, 40%);
+$logo-color-darker:   darken($logo-color, 50%);
+$logo-color-darkest:  darken($logo-color, 60%);
+
+$background: #CDDDDD;
 
 
-$base: #FF747A;  //main color logo
+
 
 $baselight : #fec7c9;
 $middle1: #fd8f94;
 $middle2: #feabaf;
+
+
+
+$color3: rgba(172, 189, 186, 1);
+$color5: #581076;
+
+
 
 
 

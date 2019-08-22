@@ -313,7 +313,9 @@ template {
 
 body {
   margin: 0 auto;
+  background: #CDDDDD;
   min-height: 100vh;
+  font-size: 16px;
 }
 
 *,
@@ -328,37 +330,18 @@ img {
 
 .underline {
   border-bottom: 30px solid #feabaf;
+  inset: 0 -0.475em 0;
   display: inline-block;
-}
-
-body {
-  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-}
-
-html {
-  font-size: 12px;
-}
-@media screen and (min-width: 320px) {
-  html {
-    font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
-  }
-}
-@media screen and (min-width: 1440px) {
-  html {
-    font-size: 16px;
-  }
 }
 
 .container_intro {
   display: grid;
   grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
-  grid-gap: 10px;
   grid-template-rows: auto;
-  background: #cddddd;
 }
 
 .welcome__background {
-  background-image: linear-gradient(15deg, #0E8D94 0%, #167C80 50%, #055A5B 100%);
+  background-image: linear-gradient(15deg, #0E8D94 0%, #0E8D94 50%, #055A5B 100%);
   grid-column: 1/-1;
   grid-row: 1/8;
   height: 90vh;
@@ -371,7 +354,7 @@ html {
   grid-column: 9/14;
   grid-row: 1/5;
   justify-self: end;
-  margin-top: 5vh;
+  margin-top: 4rem;
   z-index: 3;
 }
 
@@ -380,7 +363,7 @@ html {
   grid-row: 5/6;
   align-self: start;
   font-family: "Open Sans", sans-serif;
-  color: #faf7eb;
+  color: #f2f9f9;
   z-index: 4;
 }
 .welcome__text h4 {
@@ -418,6 +401,7 @@ html {
 .about__img {
   grid-column: 10/14;
   grid-row: 15/18;
+  justify-self: end;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -446,10 +430,9 @@ html {
   }
 }
 .portfolio__head {
-  margin-top: 20vh;
+  margin-top: 8rem;
   display: grid;
   grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
-  grid-gap: 10px;
   grid-template-rows: auto;
 }
 
@@ -464,7 +447,7 @@ html {
 }
 
 .portfolio__text {
-  color: #000000;
+  color: #021f21;
   font-family: "EB Garamond", serif;
   margin: 0;
   font-size: 1.5em;
@@ -473,32 +456,111 @@ html {
   align-self: end;
 }
 
-.work__title {
+.work__section {
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
+  grid-template-rows: auto;
+  margin-top: 4rem;
+}
+
+.massen__background {
+  grid-column: 4/-1;
+  grid-row: 1/9;
+  background-color: #B6E3E9;
+}
+
+.massen__img {
+  grid-column: 5/14;
+  grid-row: 1/9;
+  justify-self: end;
+}
+
+.massen__title {
+  grid-column: 3/6;
+  grid-row: 4/5;
+  justify-self: start;
   font-family: "EB Garamond", serif;
   font-weight: 700;
   font-size: 3em;
-  color: #000000;
+  color: #021f21;
   opacity: .6;
   margin: 0;
 }
 
-.work__desc {
+.massen__desc {
+  grid-column: 3/6;
+  grid-row: 5/6;
+  justify-self: start;
   font-family: "Open Sans", sans-serif;
   font-style: italic;
   font-weight: 400;
-  margin: 0;
-  padding: .3em 0 1em;
+  margin: 1em;
 }
 
-.work__text {
+.massen__text {
+  grid-column: 3/6;
+  grid-row: 6/7;
+  justify-self: start;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: #000000;
+  color: #021f21;
 }
 
-.work__link {
-  text-decoration: none;
-  color: #000000;
+.massen__button {
+  grid-column: 3/6;
+  grid-row: 7/8;
+  justify-self: start;
+}
+
+.friseur__background {
+  grid-column: 1/12;
+  grid-row: 10/18;
+  background-color: #FAB989;
+}
+
+.friseur__img {
+  grid-column: 2/10;
+  grid-row: 10/18;
+  justify-self: start;
+}
+
+.friseur__title {
+  grid-column: 10/13;
+  grid-row: 13/14;
+  justify-self: end;
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+  font-size: 3em;
+  color: #021f21;
+  opacity: .6;
+  margin: 0;
+}
+
+.friseur__desc {
+  grid-column: 10/13;
+  grid-row: 14/15;
+  justify-self: end;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  margin: 1em;
+  text-align: right;
+}
+
+.friseur__text {
+  grid-column: 10/13;
+  grid-row: 15/16;
+  justify-self: end;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #021f21;
+  text-align: right;
+}
+
+.friseur__button {
+  grid-column: 10/13;
+  grid-row: 16/17;
+  justify-self: end;
 }
 
 .border1 {
@@ -512,11 +574,16 @@ html {
   margin-right: 2em;
 }
 
+.work__link {
+  text-decoration: none;
+  color: #021f21;
+}
+
 /* Common button styles */
 .button {
   min-width: 150px;
   max-width: 250px;
-  margin-top: 1em;
+  margin-bottom: 1em;
   padding: 1em 2em;
   border: none;
   background: none;
@@ -624,7 +691,7 @@ html {
 }
 
 .contact__text {
-  color: #000000;
+  color: #021f21;
   font-family: "EB Garamond", serif;
   text-align: center;
   margin: 1em;
@@ -641,7 +708,7 @@ html {
   text-align: center;
 }
 .contact__email__column a:hover {
-  color: #faf7eb;
+  color: #f2f9f9;
   border-bottom: 2px solid white;
   transition: 1s;
 }
@@ -652,7 +719,7 @@ html {
   text-align: center;
 }
 .contact__github__column a:hover {
-  color: #faf7eb;
+  color: #f2f9f9;
   border-bottom: 2px solid white;
   transition: 1s;
 }
@@ -663,7 +730,7 @@ html {
   text-align: center;
 }
 .contact__linkedin__column a:hover {
-  color: #faf7eb;
+  color: #f2f9f9;
   border-bottom: 2px solid white;
   transition: 1s;
 }
@@ -671,7 +738,7 @@ html {
 .email__title,
 .github__title,
 .linkedin__title {
-  color: #faf7eb;
+  color: #f2f9f9;
   font-family: "EB Garamond", serif;
   font-size: 4em;
   margin: 0 0 .5em;
@@ -680,7 +747,7 @@ html {
 .email__link,
 .github__link,
 .linkedin__link {
-  color: #000000;
+  color: #021f21;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   text-decoration: none;
@@ -688,9 +755,9 @@ html {
 
 .footer {
   height: 5em;
-  color: #faf7eb;
+  color: #f2f9f9;
   text-align: center;
-  background: #000000;
+  background: #021f21;
 }
 .footer p {
   padding: 1.9em 0;

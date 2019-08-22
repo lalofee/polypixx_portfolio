@@ -1,15 +1,10 @@
-
-.portfolio {
-	// position: relative;
-}
-
+// PORTFOLIO HEADER //
 
 .portfolio__head {
-	// height: 80vh;
-	margin-top: 20vh;
+	margin-top: $space-between;
 	display: grid;
     grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
-    grid-gap: 10px;
+    // grid-gap: 10px;
     grid-template-rows: auto;
 }
 
@@ -35,9 +30,32 @@
 		align-self: end;
 	}
 
+// PORTFOLIO WORK //
+
+.work__section {
+	display: grid;
+    grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
+	grid-template-rows: auto;
+	margin-top: $space-xxl;
+	}
 
 
-.work__title {
+
+/////////////////MASSENÜBERWACHUNG///////////////////////	
+.massen__background {
+	grid-column: 4/-1;
+	grid-row: 1/9;
+ 	background-color: #B6E3E9;
+}
+.massen__img {
+	grid-column: 5/14;
+	grid-row: 1/9;
+	justify-self: end;
+}
+.massen__title {
+	grid-column: 3/6;
+	grid-row: 4/5;
+	justify-self: start;
 	font-family: $font-sub_heading;
 	font-weight: $fw-bold;
 	font-size: 3em;
@@ -45,26 +63,82 @@
 	opacity: .6;
 	margin: 0;
 }
-
-.work__desc {
+.massen__desc {
+	grid-column: 3/6;
+	grid-row: 5/6;
+	justify-self: start;
 	font-family: $font-text;
 	font-style: italic;
 	font-weight: $fw-regular;
-	margin: 0;
-	padding: .3em 0 1em;
+	margin: 1em;
+	// padding: .3em 0 1em;
 }
-
-.work__text {
+.massen__text {
+	grid-column: 3/6;
+	grid-row: 6/7;
+	justify-self: start;
 	font-family: $font-text;
 	font-weight: $fw-regular;
 	color: $black;
 }
-
-.work__link {
-	text-decoration: none;
-	color: $black;
+.massen__button {
+	grid-column: 3/6;
+	grid-row: 7/8;
+	justify-self: start;
 }
 
+
+/////////////////FRISEURAKADEMIE///////////////////////	
+.friseur__background {
+	grid-column: 1/12;
+	grid-row: 10/18;
+	 background-color: #FAB989;
+}
+.friseur__img {
+	grid-column: 2/10;
+	grid-row: 10/18;
+	justify-self: start;
+}
+.friseur__title {
+	grid-column: 10/13;
+	grid-row: 13/14;
+	justify-self: end;
+	font-family: $font-sub_heading;
+	font-weight: $fw-bold;
+	font-size: 3em;
+	color: $black;
+	opacity: .6;
+	margin: 0;
+}
+.friseur__desc {
+	grid-column: 10/13;
+	grid-row: 14/15;
+	justify-self: end;
+	font-family: $font-text;
+	font-style: italic;
+	font-weight: $fw-regular;
+	margin: 1em;
+	text-align: right;
+
+}
+.friseur__text {
+	grid-column: 10/13;
+	grid-row: 15/16;
+	justify-self: end;
+	font-family: $font-text;
+	font-weight: $fw-regular;
+	color: $black;
+	text-align: right;
+
+}
+.friseur__button {
+	grid-column: 10/13;
+	grid-row: 16/17;
+	justify-self: end;
+}
+
+
+// Border of IGRA and Allesverwerter
 .border1 {
 	border-radius: 0 25px;
 }
@@ -85,11 +159,16 @@
 //////////////////       button styles        //////////////////
 /////////////////////////////////////////////////////////////////
 
+.work__link {
+	text-decoration: none;
+	color: $black;
+}
+
 /* Common button styles */
 .button {
 	min-width: 150px;
 	max-width: 250px;
-	margin-top: 1em;
+	margin-bottom: 1em;
 	padding: 1em 2em;
 	border: none;
 	background: none;

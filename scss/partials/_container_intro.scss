@@ -1,16 +1,11 @@
-.container_intro {
-    // height: 200vh;
-    // width: 100vw;
+.container_intro {    
     display: grid;
     grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
-    grid-gap: 10px;
     grid-template-rows: auto;
-    background: #cddddd;
 }
 // top-background
 .welcome__background {
-    background-image: linear-gradient(15deg, #0E8D94 0%, #167C80 50%, #055A5B 100%);    
-    // background-color: #477E87;
+    background-image: linear-gradient(15deg, #0E8D94 0%, $main-color 50%, #055A5B 100%);    
     grid-column: 1/-1;
     grid-row: 1/8;
     height: 90vh;
@@ -19,14 +14,12 @@
     overflow: hidden;
 }
 
-
 // POLYPIXX-LOGO
 .welcome__logo {
-    // max-width: 800px;
     grid-column: 9/14;
     grid-row: 1/5;
     justify-self: end;
-    margin-top: 5vh;
+    margin-top: $space-xxl;
     z-index: 3;
 }
 
@@ -46,6 +39,7 @@
         }
     }
 }
+
 // WEB-DESIGN+FOTO-GRAFIE
 .about__title {
     grid-column: 2/10;
@@ -60,7 +54,7 @@
     opacity: .6;
     z-index: 5;
     span {
-        color: $base;
+        color: $logo-color;
     }
 }
 
@@ -76,6 +70,7 @@
 .about__img {
     grid-column: 10/14;
     grid-row: 15/18;
+    justify-self: end;
 }
    
     

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro:100,300,500,700|EB+Garamond:500,600,700|Open+Sans: 700');
 
-$col: calc((1200px - (11 * 10px)) / 12); /*($wrapperWidth - ($numberOfGutters * $gutterWidth)) / $numberOfColumns */
-
-
 
 $font-heading: 'Advent Pro',
 sans-serif;
@@ -32,10 +29,13 @@ $fw-bold: 700;
 
 
 
-// scrolling letters //
-$font-scroll-text: 'Advent Pro',
-sans-serif;
-$fontsize-scroll-text: 8vw;
+// SPACING //
+$space-sm: 0.25rem;
+$space-med: 0.5rem;
+$space-lg: 1rem;
+$space-xl: 2rem;
+$space-xxl: 4rem;
+$space-between: 8rem;
 
-
-$letter-spacing: 10px;
+// GRID //
+$col: calc((1200px - (11 * 10px)) / 12); /*($wrapperWidth - ($numberOfGutters * $gutterWidth)) / $numberOfColumns */
