@@ -2,7 +2,6 @@ body {
   margin: 0 auto;
   background: $background;
   min-height: 100vh;
-  font-size: 16px;
 }
 
 *,
@@ -16,53 +15,38 @@ img {
 }
 
 .underline {
-  border-bottom: 30px solid $middle2;
+  border-bottom: 30px solid $highlight-color;
   inset: 0 -0.475em 0;
   display: inline-block;
 }
 
-// p {
-//   line-height: 1.5em;
-// }
+p {
+  line-height: 1.5em;
+}
 
-///////////////////the fluid typography from css-tricks//////////////////
-// body {
-//   font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-// }
+/////////////////the fluid typography from css-tricks//////////////////
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 14px;
+$max_font: 16px;
 
-// @function strip-unit($value) {
-//   @return $value / ($value * 0 + 1);
-// }
-
-// @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-//   $u1: unit($min-vw);
-//   $u2: unit($max-vw);
-//   $u3: unit($min-font-size);
-//   $u4: unit($max-font-size);
-
-//   @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
-//     & {
-//       font-size: $min-font-size;
-
-//       @media screen and (min-width: $min-vw) {
-//         font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-//       }
-
-//       @media screen and (min-width: $max-vw) {
-//         font-size: $max-font-size;
-//       }
-//     }
-//   }
-// }
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
 
 
-// $min_width: 320px;
-// $max_width: 1440px;
-// $min_font: 12px;
-// $max_font: 16px;
+//////////////////////////////////////
+h1 {
+  font-size: 24vmin;
+}
 
-// html {
-//   @include fluid-type($min_width, $max_width, $min_font, $max_font);
-// }
+h2 {
+  font-size: 16vmin;
+}
 
-
+h3 {
+  font-size: 6vmin;
+}
+h4 {
+  font-size: calc(0.5rem + 2vmin);
+}

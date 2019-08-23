@@ -1,31 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro:100,300,500,700|EB+Garamond:500,600,700|Open+Sans: 700');
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro:700|EB+Garamond:400i,800|Open+Sans&display=swap');
 
 
 $font-heading: 'Advent Pro',
 sans-serif;
 
-$font-sub_heading: 'EB Garamond',
+$font-sub_heading: 'EB Garamond', 
 serif;
 
-$font-text: 'Open Sans',
+$font-text: 'Open Sans', 
 sans-serif;
+
 
 
 
 // open sans
 $fw-regular: 400;
 
-// garamond
-$fw-medium: 500;
-$fw-semi-bold: 600;
+
+// eb garamond
+$fw-regular: 400;  
+$fw-extrabold: 800;
 
 // advent pro
-$fw-thin: 100;
-$fw-light: 300;
-$fw-medium: 500;
-
-// open sans, garamond, advent pro
 $fw-bold: 700;
+
+
 
 
 
@@ -39,3 +38,5 @@ $space-between: 8rem;
 
 // GRID //
 $col: calc((1200px - (11 * 10px)) / 12); /*($wrapperWidth - ($numberOfGutters * $gutterWidth)) / $numberOfColumns */
+
+

@@ -2,8 +2,13 @@ $black: #021f21;
 
 $white: #f2f9f9;  
 
-// main color sheme  //
+$background: #CDDDDD;
 
+$headline: #525858;
+
+$highlight-color: #feabaf;
+
+// main color sheme  //
 $main-color: #0E8D94;
 $main-color-lightest: lighten($main-color, 20%);
 $main-color-lighter:  lighten($main-color, 15%);
@@ -22,14 +27,14 @@ $logo-color-dark:     darken($logo-color, 40%);
 $logo-color-darker:   darken($logo-color, 50%);
 $logo-color-darkest:  darken($logo-color, 60%);
 
-$background: #CDDDDD;
+
 
 
 
 
 $baselight : #fec7c9;
 $middle1: #fd8f94;
-$middle2: #feabaf;
+
 
 
 

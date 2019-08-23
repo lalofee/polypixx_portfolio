@@ -4,30 +4,29 @@
 	margin-top: $space-between;
 	display: grid;
     grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
-    // grid-gap: 10px;
     grid-template-rows: auto;
 }
 
 .portfolio__title {
-		color: #525858;
+	grid-column: 2/14;
+	grid-row: 1/3;		
+	align-self: start;
+
+		color: $headline;
 		font-family: $font-heading;
 		margin: 0;
-        font-size: 10vw;
 		font-weight: $fw-bold;
-		grid-column: 2/9;
-		grid-row: 1/3;
-		// align-self: end;
-		// justify-self: center;
 	}
 
 .portfolio__text {
 		color:$black;
 		font-family: $font-sub_heading;
-		margin: 0;
-		font-size: 1.5em;
+		font-weight: $fw-regular;
+		font-style: italic;
+		margin: 1em 0;
 		grid-column: 2/8;
 		grid-row: 3/4;
-		align-self: end;
+		align-self: start;
 	}
 
 // PORTFOLIO WORK //
@@ -151,6 +150,41 @@
 	justify-self: start;
 }
 
+/////////////////CODEFACTORY///////////////////////	
+.code__background {
+	grid-column: 2/10;
+	grid-row: 25/33;
+ 	background-color: $background;
+}
+.code__img {
+	grid-column: 2/10;
+	grid-row: 25/33;
+	justify-self: end;
+}
+.code__title {
+	grid-column: 10/13;
+	grid-row: 28/29;
+	justify-self: start;
+	@include work__title__style;
+}
+.code__desc {
+	grid-column: 10/13;
+	grid-row: 29/30;
+	justify-self: start;
+	@include work__desc__style;
+}
+.code__text {
+	grid-column: 10/13;
+	grid-row: 30/31;
+	justify-self: start;
+	@include work__text__style;
+}
+.code__button {
+	grid-column: 10/13;
+	grid-row: 31/32;
+	justify-self: start;
+}
+
 
 
 // Border of IGRA and Allesverwerter
@@ -191,7 +225,7 @@
 	position: relative;
 	z-index: 1;
 	font-size: 1em;
-	font-family: $font-sub_heading;
+	font-family: $font-text;
 	border-radius: 40px;
 	border: 2px solid;
 	text-transform: uppercase;
