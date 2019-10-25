@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Advent+Pro:700|EB+Garamond:400i,800|Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Advent+Pro:700|Lora:400i,800|Open+Sans&display=swap");
 /*($wrapperWidth - ($numberOfGutters * $gutterWidth)) / $numberOfColumns */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -290,10 +290,16 @@ body {
   box-sizing: border-box; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 .underline {
   border-bottom: 30px solid #feabaf;
+  inset: 0 -0.475em 0;
+  display: inline-block; }
+
+.underline__kontakt {
+  border-bottom: 30px solid #CDDDDD;
   inset: 0 -0.475em 0;
   display: inline-block; }
 
@@ -316,7 +322,7 @@ h2 {
   font-size: 16vmin; }
 
 h3 {
-  font-size: 6vmin; }
+  font-size: 4vmin; }
 
 h4 {
   font-size: calc(0.5rem + 2vmin); }
@@ -381,25 +387,34 @@ h4 {
   grid-row: 15/18;
   justify-self: end; }
 
-@media only screen and (max-width: 1400px) {
-  .welcome_background {
-    min-height: 86vh; } }
-
 @media only screen and (max-width: 1200px) {
-  .welcome_background {
-    min-height: 70vh; } }
+  .welcome__logo {
+    margin-top: 10vh;
+    grid-column: 2/14;
+    max-width: 40vw; }
+  .underline {
+    border-bottom: 24px solid #feabaf; }
+  .underline__kontakt {
+    border-bottom: 24px solid #CDDDDD; } }
 
-@media only screen and (max-width: 900px) {
-  .welcome_background {
-    min-height: 60vh; } }
+@media only screen and (max-width: 768px) {
+  .welcome__logo {
+    max-width: 40vw; }
+  .welcome__background {
+    height: 80vh; }
+  .underline {
+    border-bottom: 15px solid #feabaf; }
+  .underline__kontakt {
+    border-bottom: 15px solid #CDDDDD; }
+  .about__img {
+    grid-column: 2/14;
+    grid-row: 17/22;
+    max-width: 30vw;
+    margin-top: 2rem; } }
 
-@media only screen and (max-width: 600px) {
-  .welcome_background {
-    min-height: 50vh; } }
-
-@media only screen and (max-width: 400px) {
-  .welcome_background {
-    min-height: 20vh; } }
+@media only screen and (max-width: 480px) {
+  .welcome__logo {
+    width: 100vw; } }
 
 .portfolio__head {
   margin-top: 8rem;
@@ -418,7 +433,7 @@ h4 {
 
 .portfolio__text {
   color: #021f21;
-  font-family: "EB Garamond", serif;
+  font-family: "Lora", serif;
   font-weight: 400;
   font-style: italic;
   margin: 1em 0;
@@ -442,19 +457,30 @@ h4 {
   grid-row: 1/9;
   justify-self: end; }
 
-.massen__title {
-  grid-column: 3/6;
-  grid-row: 4/5;
+.massen__text__background {
+  grid-column: 2/5;
+  grid-row: 4/7;
   justify-self: start;
-  font-family: "EB Garamond", serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr;
+  background-color: rgba(252, 252, 252, 0.6);
+  text-align: center;
+  padding: 2em;
+  width: 400px;
+  height: auto; }
+
+.massen__title {
+  grid-column: 1/2;
+  grid-row: 1;
+  font-family: "Lora", serif;
   font-weight: 800;
   color: #525858;
   margin: 0; }
 
 .massen__desc {
-  grid-column: 3/6;
-  grid-row: 5/6;
-  justify-self: start;
+  grid-column: 1/2;
+  grid-row: 2;
   font-family: "Open Sans", sans-serif;
   font-style: italic;
   font-weight: 400;
@@ -462,17 +488,16 @@ h4 {
   margin: 1em; }
 
 .massen__text {
-  grid-column: 3/6;
-  grid-row: 6/7;
-  justify-self: start;
+  grid-column: 1/2;
+  grid-row: 3;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #021f21; }
 
 .massen__button {
-  grid-column: 3/6;
-  grid-row: 7/8;
-  justify-self: start; }
+  grid-column: 1;
+  grid-row: 4;
+  justify-self: center; }
 
 .friseur__background {
   grid-column: 1/12;
@@ -482,22 +507,32 @@ h4 {
 .friseur__img {
   grid-column: 2/10;
   grid-row: 9/17;
-  justify-self: end; }
+  justify-self: start; }
+
+.friseur__text__background {
+  grid-column: 10/14;
+  grid-row: 12/15;
+  display: grid;
+  justify-self: end;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr;
+  background-color: rgba(252, 252, 252, 0.6);
+  text-align: center;
+  padding: 2em;
+  width: 400px;
+  height: auto; }
 
 .friseur__title {
-  grid-column: 10/13;
-  grid-row: 12/13;
-  justify-self: end;
-  font-family: "EB Garamond", serif;
+  grid-column: 1;
+  grid-row: 1;
+  font-family: "Lora", serif;
   font-weight: 800;
   color: #525858;
   margin: 0; }
 
 .friseur__desc {
-  grid-column: 10/13;
-  grid-row: 13/14;
-  justify-self: end;
-  text-align: right;
+  grid-column: 1/2;
+  grid-row: 2;
   font-family: "Open Sans", sans-serif;
   font-style: italic;
   font-weight: 400;
@@ -505,18 +540,15 @@ h4 {
   margin: 1em; }
 
 .friseur__text {
-  grid-column: 10/13;
-  grid-row: 14/15;
-  justify-self: end;
-  text-align: right;
+  grid-column: 1/2;
+  grid-row: 3;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #021f21; }
 
 .friseur__button {
   grid-column: 10/13;
-  grid-row: 15/16;
-  justify-self: end; }
+  grid-row: 15/16; }
 
 .recipe__background {
   grid-column: 4/-1;
@@ -526,41 +558,40 @@ h4 {
 .recipe__img {
   grid-column: 5/14;
   grid-row: 17/25;
-  justify-self: start; }
+  justify-self: end; }
+
+.recipe__text__background {
+  grid-column: 2/5;
+  grid-row: 20/23;
+  justify-self: start;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
+  background-color: rgba(252, 252, 252, 0.6);
+  text-align: center;
+  padding: 2em;
+  width: 400px;
+  height: auto; }
 
 .recipe__title {
-  grid-column: 3/6;
-  grid-row: 20/21;
-  justify-self: start;
-  font-family: "EB Garamond", serif;
+  grid-column: 1;
+  grid-row: 1;
+  font-family: "Lora", serif;
   font-weight: 800;
   color: #525858;
   margin: 0; }
 
-.recipe__desc {
-  grid-column: 3/6;
-  grid-row: 21/22;
-  justify-self: start;
-  text-align: left;
-  font-family: "Open Sans", sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  color: #021f21;
-  margin: 1em; }
-
 .recipe__text {
-  grid-column: 3/6;
-  grid-row: 22/23;
-  justify-self: start;
-  text-align: left;
+  grid-column: 1;
+  grid-row: 2;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #021f21; }
 
 .recipe__button {
-  grid-column: 3/6;
-  grid-row: 23/24;
-  justify-self: start; }
+  grid-column: 1;
+  grid-row: 3;
+  justify-self: center; }
 
 .code__background {
   grid-column: 2/10;
@@ -570,13 +601,25 @@ h4 {
 .code__img {
   grid-column: 2/10;
   grid-row: 25/33;
-  justify-self: end; }
+  justify-self: start; }
+
+.code__text__background {
+  grid-column: 10/14;
+  grid-row: 28/31;
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr;
+  background-color: rgba(252, 252, 252, 0.6);
+  text-align: center;
+  padding: 2em;
+  width: 400px;
+  height: auto; }
 
 .code__title {
   grid-column: 10/13;
   grid-row: 28/29;
-  justify-self: start;
-  font-family: "EB Garamond", serif;
+  font-family: "Lora", serif;
   font-weight: 800;
   color: #525858;
   margin: 0; }
@@ -584,7 +627,6 @@ h4 {
 .code__desc {
   grid-column: 10/13;
   grid-row: 29/30;
-  justify-self: start;
   font-family: "Open Sans", sans-serif;
   font-style: italic;
   font-weight: 400;
@@ -594,7 +636,6 @@ h4 {
 .code__text {
   grid-column: 10/13;
   grid-row: 30/31;
-  justify-self: start;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #021f21; }
@@ -602,7 +643,7 @@ h4 {
 .code__button {
   grid-column: 10/13;
   grid-row: 31/32;
-  justify-self: start; }
+  justify-self: center; }
 
 .border1 {
   border-radius: 0 25px; }
@@ -621,7 +662,6 @@ h4 {
 .button {
   min-width: 150px;
   max-width: 250px;
-  margin-bottom: 1em;
   padding: 1em 2em;
   border: none;
   background: none;
@@ -630,7 +670,6 @@ h4 {
   z-index: 1;
   font-size: 1em;
   font-family: "Open Sans", sans-serif;
-  border-radius: 40px;
   border: 2px solid;
   text-transform: uppercase; }
 
@@ -676,8 +715,7 @@ h4 {
   transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
 
 .button__styles::after {
-  background: white;
-  opacity: .3; }
+  background-color: rgba(252, 252, 252, 0.4); }
 
 .button__styles::before {
   border: 2px solid white;
@@ -695,78 +733,75 @@ h4 {
   -webkit-transform: scale3d(0.8, 0.8, 1);
   transform: scale3d(0.8, 0.8, 1); }
 
-.contact {
+.contact__section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   display: grid;
-  grid-template-columns: 8% 1fr 1fr 1fr 8%;
-  grid-template-rows: 4fr 2fr 2fr 1fr;
-  grid-gap: 20px;
-  text-align: center;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
+  grid-template-rows: auto;
   background-color: #581076; }
 
 .contact__title {
+  grid-column: 2/14;
+  grid-row: 1/2;
+  text-align: center;
   color: #FF747A;
   font-family: "Advent Pro", sans-serif;
-  font-size: 12em;
-  font-weight: 700;
-  margin: .5em 0 0;
-  grid-column: 2/5;
-  grid-row: 1;
-  align-self: end;
-  justify-self: center; }
+  margin: 0;
+  font-weight: 700; }
 
 .contact__text {
-  color: #021f21;
-  font-family: "EB Garamond", serif;
+  grid-column: 2/14;
+  grid-row: 3/4;
   text-align: center;
+  color: #021f21;
+  font-family: "Lora", serif;
   margin: 1em;
   font-size: 2em;
-  grid-column: 2/5;
-  grid-row: 2;
-  align-self: start;
-  justify-self: center; }
+  font-style: italic; }
 
-.contact__email__column {
-  grid-column: 2/3;
-  grid-row: 3;
+.contact__email {
+  grid-column: 2/14;
+  grid-row: 5/6;
+  justify-self: start;
   text-align: center; }
-  .contact__email__column a:hover {
+  .contact__email a:hover {
     color: #f2f9f9;
     border-bottom: 2px solid white;
     transition: 1s; }
 
-.contact__github__column {
-  grid-column: 3/4;
-  grid-row: 3;
+.contact__github {
+  grid-column: 2/14;
+  grid-row: 5/6;
+  justify-self: center;
   text-align: center; }
-  .contact__github__column a:hover {
+  .contact__github a:hover {
     color: #f2f9f9;
     border-bottom: 2px solid white;
     transition: 1s; }
 
-.contact__linkedin__column {
-  grid-column: 4/5;
-  grid-row: 3;
+.contact__linkedin {
+  grid-column: 2/14;
+  grid-row: 5/6;
+  justify-self: end;
   text-align: center; }
-  .contact__linkedin__column a:hover {
+  .contact__linkedin a:hover {
     color: #f2f9f9;
     border-bottom: 2px solid white;
     transition: 1s; }
 
-.email__title,
-.github__title,
-.linkedin__title {
+.title {
   color: #f2f9f9;
-  font-family: "EB Garamond", serif;
+  font-family: "Lora", serif;
   font-size: 4em;
   margin: 0 0 .5em; }
 
-.email__link,
-.github__link,
-.linkedin__link {
+.link {
   color: #021f21;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  text-decoration: none; }
+  text-decoration: none;
+  text-align: center; }
 
 .footer {
   height: 5em;

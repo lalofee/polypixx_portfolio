@@ -3,40 +3,40 @@
 .portfolio__head {
 	margin-top: $space-between;
 	display: grid;
-    grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
-    grid-template-rows: auto;
+	grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
+	grid-template-rows: auto;
 }
 
 .portfolio__title {
 	grid-column: 2/14;
-	grid-row: 1/3;		
+	grid-row: 1/3;
 	align-self: start;
 
-		color: $headline;
-		font-family: $font-heading;
-		margin: 0;
-		font-weight: $fw-bold;
-	}
+	color: $headline;
+	font-family: $font-heading;
+	margin: 0;
+	font-weight: $fw-bold;
+}
 
 .portfolio__text {
-		color:$black;
-		font-family: $font-sub_heading;
-		font-weight: $fw-regular;
-		font-style: italic;
-		margin: 1em 0;
-		grid-column: 2/8;
-		grid-row: 3/4;
-		align-self: start;
-	}
+	color: $black;
+	font-family: $font-sub_heading;
+	font-weight: $fw-regular;
+	font-style: italic;
+	margin: 1em 0;
+	grid-column: 2/8;
+	grid-row: 3/4;
+	align-self: start;
+}
 
 // PORTFOLIO WORK //
 
 .work__section {
 	display: grid;
-    grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
+	grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
 	grid-template-rows: auto;
 	margin-top: $space-xxl;
-	}
+}
 
 
 
@@ -44,35 +44,47 @@
 .massen__background {
 	grid-column: 4/-1;
 	grid-row: 1/9;
- 	background-color: #B6E3E9;
+	background-color: #B6E3E9;
 }
+
 .massen__img {
 	grid-column: 5/14;
 	grid-row: 1/9;
 	justify-self: end;
 }
-.massen__title {
-	grid-column: 3/6;
-	grid-row: 4/5;
+
+.massen__text__background {
+	grid-column: 2/5;
+	grid-row: 4/7;
 	justify-self: start;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 4fr;
+	@include text__background__style;
+}
+
+.massen__title {
+	grid-column: 1/2;
+	grid-row: 1;
 	@include work__title__style;
 }
+
 .massen__desc {
-	grid-column: 3/6;
-	grid-row: 5/6;
-	justify-self: start;
+	grid-column: 1/2;
+	grid-row: 2;
 	@include work__desc__style;
 }
+
 .massen__text {
-	grid-column: 3/6;
-	grid-row: 6/7;
-	justify-self: start;
+	grid-column: 1/2;
+	grid-row: 3;
 	@include work__text__style;
 }
+
 .massen__button {
-	grid-column: 3/6;
-	grid-row: 7/8;
-	justify-self: start;
+	grid-column: 1;
+	grid-row: 4;
+	justify-self: center;
 }
 
 
@@ -82,35 +94,44 @@
 	grid-row: 9/17;
 	background-color: #FAB989;
 }
+
 .friseur__img {
 	grid-column: 2/10;
 	grid-row: 9/17;
-	justify-self: end;
+	justify-self: start;
 }
-.friseur__title {
-	grid-column: 10/13;
-	grid-row: 12/13;
+
+.friseur__text__background {
+	grid-column: 10/14;
+	grid-row: 12/15;
+	display: grid;
 	justify-self: end;
+	grid-template-columns: 1fr;
+	grid-template-rows: 4fr;
+	@include text__background__style;
+}
+
+.friseur__title {
+	grid-column: 1;
+	grid-row: 1;
 	@include work__title__style;
 }
+
 .friseur__desc {
-	grid-column: 10/13;
-	grid-row: 13/14;
-	justify-self: end;
-	text-align: right;
-    @include work__desc__style;
+	grid-column: 1/2;
+	grid-row: 2;
+	@include work__desc__style;
 }
+
 .friseur__text {
-	grid-column: 10/13;
-	grid-row: 14/15;
-	justify-self: end;
-	text-align: right;
+	grid-column: 1/2;
+	grid-row: 3;
 	@include work__text__style;
 }
+
 .friseur__button {
 	grid-column: 10/13;
 	grid-row: 15/16;
-	justify-self: end;
 }
 
 /////////////////RECIPE///////////////////////	
@@ -119,70 +140,86 @@
 	grid-row: 17/25;
 	background-color: #d4f8dc;
 }
+
 .recipe__img {
 	grid-column: 5/14;
 	grid-row: 17/25;
-	justify-self: start;
+	justify-self: end;
 }
-.recipe__title {
-	grid-column: 3/6;
-	grid-row: 20/21;
+
+.recipe__text__background {
+	grid-column: 2/5;
+	grid-row: 20/23;
 	justify-self: start;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 3fr;
+	@include text__background__style;
+}
+
+.recipe__title {
+	grid-column: 1;
+	grid-row: 1;
 	@include work__title__style;
 }
-.recipe__desc {
-	grid-column: 3/6;
-	grid-row: 21/22;
-	justify-self: start;
-	text-align: left;
-    @include work__desc__style;
-}
+
 .recipe__text {
-	grid-column: 3/6;
-	grid-row: 22/23;
-	justify-self: start;
-	text-align: left;
+	grid-column: 1;
+	grid-row: 2;
 	@include work__text__style;
 }
+
 .recipe__button {
-	grid-column: 3/6;
-	grid-row: 23/24;
-	justify-self: start;
+	grid-column: 1;
+	grid-row: 3;
+	justify-self: center;
 }
 
 /////////////////CODEFACTORY///////////////////////	
 .code__background {
 	grid-column: 2/10;
 	grid-row: 25/33;
- 	background-color: $background;
+	background-color: $background;
 }
+
 .code__img {
 	grid-column: 2/10;
 	grid-row: 25/33;
-	justify-self: end;
+	justify-self: start;
 }
+
+.code__text__background {
+	grid-column: 10/14;
+	grid-row: 28/31;
+	justify-self: end;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 4fr;
+	@include text__background__style;
+}
+
 .code__title {
 	grid-column: 10/13;
 	grid-row: 28/29;
-	justify-self: start;
 	@include work__title__style;
 }
+
 .code__desc {
 	grid-column: 10/13;
 	grid-row: 29/30;
-	justify-self: start;
 	@include work__desc__style;
 }
+
 .code__text {
 	grid-column: 10/13;
 	grid-row: 30/31;
-	justify-self: start;
 	@include work__text__style;
 }
+
 .code__button {
 	grid-column: 10/13;
 	grid-row: 31/32;
-	justify-self: start;
+	justify-self: center;
 }
 
 
@@ -217,7 +254,6 @@
 .button {
 	min-width: 150px;
 	max-width: 250px;
-	margin-bottom: 1em;
 	padding: 1em 2em;
 	border: none;
 	background: none;
@@ -226,7 +262,7 @@
 	z-index: 1;
 	font-size: 1em;
 	font-family: $font-text;
-	border-radius: 40px;
+	// border-radius: 40px;
 	border: 2px solid;
 	text-transform: uppercase;
 }
@@ -282,8 +318,7 @@
 
 ///// background color /////
 .button__styles::after {
-	background: white;
-	opacity: .3;
+	background-color: rgba(252, 252, 252, 0.4);
 }
 
 
@@ -316,5 +351,3 @@
 /////////////////////////////////////////////////////////////////
 
 ////////screen bigger than 1650px gehts more distance on the sides/////
-
-

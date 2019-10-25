@@ -3,6 +3,7 @@ body {
   background: $background;
   min-height: 100vh;
 }
+
 *,
 *::after,
 *::before {
@@ -11,10 +12,17 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .underline {
   border-bottom: 30px solid $highlight-color;
+  inset: 0 -0.475em 0;
+  display: inline-block;
+}
+
+.underline__kontakt {
+  border-bottom: 30px solid $background;
   inset: 0 -0.475em 0;
   display: inline-block;
 }
@@ -44,7 +52,7 @@ h2 {
 }
 
 h3 {
-  font-size: 6vmin;
+  font-size: 4vmin;
 }
 
 h4 {

@@ -75,37 +75,50 @@
 }
    
     
- @media only screen and (max-width: 1400px) {
-    
-    .welcome_background {
-        min-height: 86vh;
-    }
-  }
+
 
   @media only screen and (max-width: 1200px) {
     
-    .welcome_background {
-        min-height: 70vh;
+    .welcome__logo {
+        margin-top: 10vh;
+        grid-column: 2/14;
+        max-width: 40vw;
+    }
+    .underline {
+        border-bottom: 24px solid $highlight-color;
+    }
+    .underline__kontakt {
+        border-bottom: 24px solid $background;
     }
   }
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 768px) {
     
-    .welcome_background {
-        min-height: 60vh;
+    .welcome__logo {
+      max-width: 40vw;
+    }
+    .welcome__background {
+        height: 80vh;
+    }
+    .underline {
+        border-bottom: 15px solid $highlight-color;
+    }
+    .underline__kontakt {
+        border-bottom: 15px solid $background;
+    }
+    .about__img {
+        grid-column: 2/14;
+        grid-row: 17/22;
+        max-width: 30vw;
+        margin-top: $space-xl;
+
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 480px) {
     
-    .welcome_background {
-        min-height: 50vh;
-    }
+    .welcome__logo {
+        width: 100vw;
+      }
   }
 
-  @media only screen and (max-width: 400px) {
-    
-    .welcome_background {
-        min-height: 20vh;
-    }
-  }

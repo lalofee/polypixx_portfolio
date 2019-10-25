@@ -1,41 +1,53 @@
-.contact {
-    // height: 80vh;
-    display: grid;
-    grid-template-columns: 8% 1fr 1fr 1fr 8%;
-    grid-template-rows: 4fr 2fr 2fr 1fr;
-    grid-gap: 20px;
-    text-align: center;
+.contact__section {
+    padding-top: $space-between;
+    padding-bottom: $space-between;
+	display: grid;
+    grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
+    grid-template-rows: auto;
     background-color: $color5;
 }
 
 .contact__title {
+    grid-column: 2/14;
+	grid-row: 1/2;		
+    text-align: center;
     color: $logo-color;
-    font-family: $font-heading;
-    font-size: 12em;
-    font-weight: $fw-bold;
-    margin: .5em 0 0;
-    grid-column: 2/5;
-    grid-row: 1;
-    align-self: end;
-    justify-self: center;
+	font-family: $font-heading;
+	margin: 0;
+	font-weight: $fw-bold;
 }
 
 .contact__text {
+    grid-column: 2/14;
+    grid-row: 3/4;
+    text-align: center;
     color: $black;
     font-family: $font-sub_heading;
-    text-align: center;
     margin: 1em;
     font-size: 2em;
-    grid-column: 2/5;
-    grid-row: 2;
-    align-self: start;
+    font-style: italic;
+}
+
+.contact__email {
+    grid-column: 2/14;
+    grid-row: 5/6;
+    justify-self: start;
+    text-align: center;
+
+
+    a:hover {
+        color: $white;
+        border-bottom: 2px solid white;
+        transition: 1s;
+    }
+}
+
+.contact__github {
+    grid-column: 2/14;
+    grid-row: 5/6;
     justify-self: center;
-}
-
-.contact__email__column {
-    grid-column: 2/3;
-    grid-row: 3;
     text-align: center;
+
 
     a:hover {
         color: $white;
@@ -44,47 +56,36 @@
     }
 }
 
-.contact__github__column {
-    grid-column: 3/4;
-    grid-row: 3;
+.contact__linkedin {
+    grid-column: 2/14;
+    grid-row: 5/6;
+    justify-self: end;
     text-align: center;
-
+    
     a:hover {
         color: $white;
         border-bottom: 2px solid white;
         transition: 1s;
     }
+
 }
 
-.contact__linkedin__column {
-    grid-column: 4/5;
-    grid-row: 3;
-    text-align: center;
-
-    a:hover {
-        color: $white;
-        border-bottom: 2px solid white;
-        transition: 1s;
-    }
-}
-
-.email__title,
-.github__title,
-.linkedin__title {
+.title {
     color: $white;
     font-family: $font-sub_heading;
     font-size: 4em;
     margin: 0 0 .5em;
 }
 
-.email__link,
-.github__link,
-.linkedin__link {
+.link {
     color: $black;
     font-family: $font-text;
     font-weight: $fw-bold;
     text-decoration: none;
+    text-align: center;
     }
+
+  
 
 
 ////////////////// footer /////////////////////////////

@@ -1,46 +1,55 @@
 // styles for work examples in the portfolio/work section
 @mixin work__title__style {
-    font-family: $font-sub_heading;
-	font-weight: $fw-extrabold;
-    color: $headline;
-	margin: 0;
+  font-family: $font-sub_heading;
+  font-weight: $fw-extrabold;
+  color: $headline;
+  margin: 0;
 }
 
 @mixin work__desc__style {
-    font-family: $font-text;
-	font-style: italic;
-    font-weight: $fw-regular;
-    color: $black;
-	margin: 1em;
+  font-family: $font-text;
+  font-style: italic;
+  font-weight: $fw-regular;
+  color: $black;
+  margin: 1em;
 }
 
 @mixin work__text__style {
-    font-family: $font-text;
-	font-weight: $fw-regular;
-	color: $black;
+  font-family: $font-text;
+  font-weight: $fw-regular;
+  color: $black;
 }
 
+@mixin text__background__style {
+  background-color: rgba(252, 252, 252, 0.6);
+	text-align: center;
+	padding: 2em;
+	width: 400px;
+	height: auto;
+}
 
 /////////////////the fluid typography from css-tricks//////////////////
 @function strip-unit($value) {
-    @return $value / ($value * 0 + 1);
-  }
-  
-  @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-    $u1: unit($min-vw);
-    $u2: unit($max-vw);
-    $u3: unit($min-font-size);
-    $u4: unit($max-font-size);
-  
-    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-      & {
-        font-size: $min-font-size;
-        @media screen and (min-width: $min-vw) {
-          font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-        }
-        @media screen and (min-width: $max-vw) {
-          font-size: $max-font-size;
-        }
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+    & {
+      font-size: $min-font-size;
+
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
       }
     }
   }
+}
