@@ -1,36 +1,41 @@
-.contact__section {
-    padding-top: $space-between;
-    padding-bottom: $space-between;
-	display: grid;
-    grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
-    grid-template-rows: auto;
-    background-color: $color5;
+// .contact__section {
+//     padding-top: $space-between;
+//     padding-bottom: $space-between;
+//     display: grid;
+//     grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
+//     grid-template-rows: auto;
+//     background-color: $color5;
+// }
+
+.contact__background {
+     background-color: $color5;
+     grid-column: 1/-1;
+     grid-row: 55/60;
+ 
 }
 
 .contact__title {
     grid-column: 2/14;
-	grid-row: 1/2;		
+    grid-row: 55/56;
     text-align: center;
     color: $logo-color;
-	font-family: $font-heading;
-	margin: 0;
-	font-weight: $fw-bold;
+    font-family: $font-heading;
+    margin: 0;
+    font-weight: $fw-bold;
 }
 
 .contact__text {
     grid-column: 2/14;
-    grid-row: 3/4;
+    grid-row: 57/58;
     text-align: center;
     color: $black;
     font-family: $font-sub_heading;
-    margin: 1em;
-    font-size: 2em;
-    font-style: italic;
+    margin: 1em 0 2em;
 }
 
 .contact__email {
     grid-column: 2/14;
-    grid-row: 5/6;
+    grid-row: 59/60;
     justify-self: start;
     text-align: center;
 
@@ -44,7 +49,7 @@
 
 .contact__github {
     grid-column: 2/14;
-    grid-row: 5/6;
+    grid-row: 59/60;
     justify-self: center;
     text-align: center;
 
@@ -58,10 +63,10 @@
 
 .contact__linkedin {
     grid-column: 2/14;
-    grid-row: 5/6;
+    grid-row: 59/60;
     justify-self: end;
     text-align: center;
-    
+
     a:hover {
         color: $white;
         border-bottom: 2px solid white;
@@ -73,7 +78,6 @@
 .title {
     color: $white;
     font-family: $font-sub_heading;
-    font-size: 4em;
     margin: 0 0 .5em;
 }
 
@@ -83,17 +87,17 @@
     font-weight: $fw-bold;
     text-decoration: none;
     text-align: center;
-    }
+}
 
-  
+
 
 
 ////////////////// footer /////////////////////////////
 .footer {
-    height: 5em;  
+    height: 5em;
     color: $white;
     text-align: center;
-    
+
     background: $black;
 
     p {

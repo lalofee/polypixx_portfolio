@@ -282,7 +282,10 @@ template {
 body {
   margin: 0 auto;
   background: #CDDDDD;
-  min-height: 100vh; }
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
+  grid-template-rows: auto; }
 
 *,
 *::after,
@@ -295,11 +298,6 @@ img {
 
 .underline {
   border-bottom: 30px solid #feabaf;
-  inset: 0 -0.475em 0;
-  display: inline-block; }
-
-.underline__kontakt {
-  border-bottom: 30px solid #CDDDDD;
   inset: 0 -0.475em 0;
   display: inline-block; }
 
@@ -326,11 +324,6 @@ h3 {
 
 h4 {
   font-size: calc(0.5rem + 2vmin); }
-
-.container_intro {
-  display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
-  grid-template-rows: auto; }
 
 .welcome__background {
   background-color: #0E8D94;
@@ -416,15 +409,9 @@ h4 {
   .welcome__logo {
     width: 100vw; } }
 
-.portfolio__head {
-  margin-top: 8rem;
-  display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
-  grid-template-rows: auto; }
-
 .portfolio__title {
   grid-column: 2/14;
-  grid-row: 1/3;
+  grid-row: 18/19;
   align-self: start;
   color: #525858;
   font-family: "Advent Pro", sans-serif;
@@ -438,28 +425,22 @@ h4 {
   font-style: italic;
   margin: 1em 0;
   grid-column: 2/8;
-  grid-row: 3/4;
+  grid-row: 19/20;
   align-self: start; }
-
-.work__section {
-  display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
-  grid-template-rows: auto;
-  margin-top: 4rem; }
 
 .massen__background {
   grid-column: 4/-1;
-  grid-row: 1/9;
+  grid-row: 20/28;
   background-color: #B6E3E9; }
 
 .massen__img {
   grid-column: 5/14;
-  grid-row: 1/9;
+  grid-row: 20/28;
   justify-self: end; }
 
 .massen__text__background {
   grid-column: 2/5;
-  grid-row: 4/7;
+  grid-row: 23/26;
   justify-self: start;
   display: grid;
   grid-template-columns: 1fr;
@@ -501,17 +482,17 @@ h4 {
 
 .friseur__background {
   grid-column: 1/12;
-  grid-row: 9/17;
+  grid-row: 29/37;
   background-color: #FAB989; }
 
 .friseur__img {
   grid-column: 2/10;
-  grid-row: 9/17;
+  grid-row: 29/37;
   justify-self: start; }
 
 .friseur__text__background {
   grid-column: 10/14;
-  grid-row: 12/15;
+  grid-row: 32/35;
   display: grid;
   justify-self: end;
   grid-template-columns: 1fr;
@@ -552,17 +533,17 @@ h4 {
 
 .recipe__background {
   grid-column: 4/-1;
-  grid-row: 17/25;
+  grid-row: 37/45;
   background-color: #d4f8dc; }
 
 .recipe__img {
   grid-column: 5/14;
-  grid-row: 17/25;
+  grid-row: 37/45;
   justify-self: end; }
 
 .recipe__text__background {
   grid-column: 2/5;
-  grid-row: 20/23;
+  grid-row: 40/43;
   justify-self: start;
   display: grid;
   grid-template-columns: 1fr;
@@ -595,17 +576,17 @@ h4 {
 
 .code__background {
   grid-column: 2/10;
-  grid-row: 25/33;
+  grid-row: 46/54;
   background-color: #CDDDDD; }
 
 .code__img {
   grid-column: 2/10;
-  grid-row: 25/33;
+  grid-row: 46/54;
   justify-self: start; }
 
 .code__text__background {
   grid-column: 10/14;
-  grid-row: 28/31;
+  grid-row: 49/52;
   justify-self: end;
   display: grid;
   grid-template-columns: 1fr;
@@ -733,17 +714,14 @@ h4 {
   -webkit-transform: scale3d(0.8, 0.8, 1);
   transform: scale3d(0.8, 0.8, 1); }
 
-.contact__section {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, calc((1200px - (11 * 10px)) / 12))) minmax(20px, 1fr);
-  grid-template-rows: auto;
-  background-color: #581076; }
+.contact__background {
+  background-color: #581076;
+  grid-column: 1/-1;
+  grid-row: 55/60; }
 
 .contact__title {
   grid-column: 2/14;
-  grid-row: 1/2;
+  grid-row: 55/56;
   text-align: center;
   color: #FF747A;
   font-family: "Advent Pro", sans-serif;
@@ -752,17 +730,15 @@ h4 {
 
 .contact__text {
   grid-column: 2/14;
-  grid-row: 3/4;
+  grid-row: 57/58;
   text-align: center;
   color: #021f21;
   font-family: "Lora", serif;
-  margin: 1em;
-  font-size: 2em;
-  font-style: italic; }
+  margin: 1em 0 2em; }
 
 .contact__email {
   grid-column: 2/14;
-  grid-row: 5/6;
+  grid-row: 59/60;
   justify-self: start;
   text-align: center; }
   .contact__email a:hover {
@@ -772,7 +748,7 @@ h4 {
 
 .contact__github {
   grid-column: 2/14;
-  grid-row: 5/6;
+  grid-row: 59/60;
   justify-self: center;
   text-align: center; }
   .contact__github a:hover {
@@ -782,7 +758,7 @@ h4 {
 
 .contact__linkedin {
   grid-column: 2/14;
-  grid-row: 5/6;
+  grid-row: 59/60;
   justify-self: end;
   text-align: center; }
   .contact__linkedin a:hover {
@@ -793,7 +769,6 @@ h4 {
 .title {
   color: #f2f9f9;
   font-family: "Lora", serif;
-  font-size: 4em;
   margin: 0 0 .5em; }
 
 .link {

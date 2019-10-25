@@ -1,11 +1,6 @@
-.container_intro {    
-    display: grid;
-    grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
-    grid-template-rows: auto;
-}
+
 // top-background
 .welcome__background {
-    // background-image: linear-gradient(15deg, #0E8D94 0%, $main-color 50%, #055A5B 100%);    
     background-color: $main-color;
     grid-column: 1/-1;
     grid-row: 1/8;
@@ -32,6 +27,7 @@
     font-family: $font-text;
     color: $white;
     z-index: 4;
+
     p {
         font-weight: $fw-regular;
         display: inline;
@@ -45,7 +41,7 @@
 // WEB-DESIGN+FOTO-GRAFIE
 .about__title {
     grid-column: 2/10;
-    grid-row: 7/13;    
+    grid-row: 7/13;
     margin: 0;
     padding: 0;
     // font-size: 14em;
@@ -55,7 +51,7 @@
     font-weight: $fw-bold;
     color: $headline;
     z-index: 5;
-    
+
     span {
         color: $highlight-color;
     }
@@ -73,39 +69,45 @@
     grid-row: 15/18;
     justify-self: end;
 }
-   
-    
 
 
-  @media only screen and (max-width: 1200px) {
-    
+
+
+@media only screen and (max-width: 1200px) {
+
     .welcome__logo {
         margin-top: 10vh;
         grid-column: 2/14;
         max-width: 40vw;
     }
+
     .underline {
         border-bottom: 24px solid $highlight-color;
     }
+
     .underline__kontakt {
         border-bottom: 24px solid $background;
     }
-  }
+}
 
-  @media only screen and (max-width: 768px) {
-    
+@media only screen and (max-width: 768px) {
+
     .welcome__logo {
-      max-width: 40vw;
+        max-width: 40vw;
     }
+
     .welcome__background {
         height: 80vh;
     }
+
     .underline {
         border-bottom: 15px solid $highlight-color;
     }
+
     .underline__kontakt {
         border-bottom: 15px solid $background;
     }
+
     .about__img {
         grid-column: 2/14;
         grid-row: 17/22;
@@ -113,12 +115,11 @@
         margin-top: $space-xl;
 
     }
-  }
+}
 
-  @media only screen and (max-width: 480px) {
-    
+@media only screen and (max-width: 480px) {
+
     .welcome__logo {
         width: 100vw;
-      }
-  }
-
+    }
+}

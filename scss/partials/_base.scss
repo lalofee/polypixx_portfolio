@@ -2,6 +2,10 @@ body {
   margin: 0 auto;
   background: $background;
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
+  grid-template-rows: auto;
+
 }
 
 *,
@@ -21,11 +25,6 @@ img {
   display: inline-block;
 }
 
-.underline__kontakt {
-  border-bottom: 30px solid $background;
-  inset: 0 -0.475em 0;
-  display: inline-block;
-}
 
 p {
   line-height: 1.5em;
