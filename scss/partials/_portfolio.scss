@@ -11,10 +11,10 @@
 	grid-column: 2/14;
 	grid-row: 18/19;
 	align-self: start;
-
 	color: $headline;
 	font-family: $font-heading;
-	margin: 0;
+	margin-top: $space-between;
+	margin-bottom: 0;
 	font-weight: $fw-bold;
 }
 
@@ -23,7 +23,7 @@
 	font-family: $font-sub_heading;
 	font-weight: $fw-regular;
 	font-style: italic;
-	margin: 1em 0;
+	margin-bottom: $space-xxl;
 	grid-column: 2/8;
 	grid-row: 19/20;
 	align-self: start;
@@ -45,12 +45,15 @@
 	grid-column: 4/-1;
 	grid-row: 20/28;
 	background-color: #B6E3E9;
+	margin-bottom: $space-xl;
 }
 
 .massen__img {
 	grid-column: 5/14;
 	grid-row: 20/28;
 	justify-self: end;
+	margin-bottom: $space-xl;
+
 }
 
 .massen__text__background {
@@ -93,12 +96,14 @@
 	grid-column: 1/12;
 	grid-row: 29/37;
 	background-color: #FAB989;
+	margin-bottom: $space-xl;
 }
 
 .friseur__img {
 	grid-column: 2/10;
 	grid-row: 29/37;
 	justify-self: start;
+	margin-bottom: $space-xl;
 }
 
 .friseur__text__background {
@@ -139,12 +144,14 @@
 	grid-column: 4/-1;
 	grid-row: 37/45;
 	background-color: #d4f8dc;
+	margin-bottom: $space-xl;
 }
 
 .recipe__img {
 	grid-column: 5/14;
 	grid-row: 37/45;
 	justify-self: end;
+	margin-bottom: $space-xl;
 }
 
 .recipe__text__background {
@@ -180,12 +187,16 @@
 	grid-column: 2/10;
 	grid-row: 46/54;
 	background-color: $background;
+	margin-bottom: $space-xl;
+
 }
 
 .code__img {
 	grid-column: 2/10;
 	grid-row: 46/54;
 	justify-self: start;
+	margin-bottom: $space-xl;
+
 }
 
 .code__text__background {

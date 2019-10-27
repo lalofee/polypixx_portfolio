@@ -339,7 +339,7 @@ h4 {
   grid-column: 9/14;
   grid-row: 1/5;
   justify-self: end;
-  margin-top: 4rem;
+  margin-top: 6rem;
   z-index: 3; }
 
 .welcome__text {
@@ -415,7 +415,8 @@ h4 {
   align-self: start;
   color: #525858;
   font-family: "Advent Pro", sans-serif;
-  margin: 0;
+  margin-top: 8rem;
+  margin-bottom: 0;
   font-weight: 700; }
 
 .portfolio__text {
@@ -423,7 +424,7 @@ h4 {
   font-family: "Lora", serif;
   font-weight: 400;
   font-style: italic;
-  margin: 1em 0;
+  margin-bottom: 6rem;
   grid-column: 2/8;
   grid-row: 19/20;
   align-self: start; }
@@ -431,12 +432,14 @@ h4 {
 .massen__background {
   grid-column: 4/-1;
   grid-row: 20/28;
-  background-color: #B6E3E9; }
+  background-color: #B6E3E9;
+  margin-bottom: 2rem; }
 
 .massen__img {
   grid-column: 5/14;
   grid-row: 20/28;
-  justify-self: end; }
+  justify-self: end;
+  margin-bottom: 2rem; }
 
 .massen__text__background {
   grid-column: 2/5;
@@ -483,12 +486,14 @@ h4 {
 .friseur__background {
   grid-column: 1/12;
   grid-row: 29/37;
-  background-color: #FAB989; }
+  background-color: #FAB989;
+  margin-bottom: 2rem; }
 
 .friseur__img {
   grid-column: 2/10;
   grid-row: 29/37;
-  justify-self: start; }
+  justify-self: start;
+  margin-bottom: 2rem; }
 
 .friseur__text__background {
   grid-column: 10/14;
@@ -534,12 +539,14 @@ h4 {
 .recipe__background {
   grid-column: 4/-1;
   grid-row: 37/45;
-  background-color: #d4f8dc; }
+  background-color: #d4f8dc;
+  margin-bottom: 2rem; }
 
 .recipe__img {
   grid-column: 5/14;
   grid-row: 37/45;
-  justify-self: end; }
+  justify-self: end;
+  margin-bottom: 2rem; }
 
 .recipe__text__background {
   grid-column: 2/5;
@@ -577,12 +584,14 @@ h4 {
 .code__background {
   grid-column: 2/10;
   grid-row: 46/54;
-  background-color: #CDDDDD; }
+  background-color: #CDDDDD;
+  margin-bottom: 2rem; }
 
 .code__img {
   grid-column: 2/10;
   grid-row: 46/54;
-  justify-self: start; }
+  justify-self: start;
+  margin-bottom: 2rem; }
 
 .code__text__background {
   grid-column: 10/14;
@@ -725,7 +734,8 @@ h4 {
   text-align: center;
   color: #FF747A;
   font-family: "Advent Pro", sans-serif;
-  margin: 0;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
   font-weight: 700; }
 
 .contact__text {
@@ -740,7 +750,8 @@ h4 {
   grid-column: 2/14;
   grid-row: 59/60;
   justify-self: start;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 8rem; }
   .contact__email a:hover {
     color: #f2f9f9;
     border-bottom: 2px solid white;
@@ -750,7 +761,8 @@ h4 {
   grid-column: 2/14;
   grid-row: 59/60;
   justify-self: center;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 8rem; }
   .contact__github a:hover {
     color: #f2f9f9;
     border-bottom: 2px solid white;
@@ -760,7 +772,8 @@ h4 {
   grid-column: 2/14;
   grid-row: 59/60;
   justify-self: end;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 8rem; }
   .contact__linkedin a:hover {
     color: #f2f9f9;
     border-bottom: 2px solid white;
