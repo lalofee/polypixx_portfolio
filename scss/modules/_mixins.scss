@@ -2,7 +2,6 @@
 @mixin work__title__style {
   font-family: $font-sub_heading;
   font-weight: $fw-extrabold;
-  color: $headline;
   margin: 0;
 }
 
@@ -10,7 +9,6 @@
   font-family: $font-text;
   font-style: italic;
   font-weight: $fw-regular;
-  color: $black;
   margin: 1em;
 }
 
@@ -25,7 +23,9 @@
 	text-align: center;
 	padding: 2em;
 	width: 400px;
-	height: auto;
+  height: auto;
+  border-radius: 10px;
+
 }
 
 /////////////////the fluid typography from css-tricks//////////////////

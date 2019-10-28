@@ -1,12 +1,14 @@
-body {
-  margin: 0 auto;
-  background: $background;
-  min-height: 100vh;
+html, body {
+ height: 100%;
+}
+
+#grid-container {
   display: grid;
   grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
   grid-template-rows: auto;
-
+  background: $background;
 }
+
 
 *,
 *::after,
@@ -19,8 +21,18 @@ img {
   height: auto;
 }
 
+h1, h2, h3, h4, p, a {
+  color: $headline;
+}
+
 .underline {
   border-bottom: 30px solid $highlight-color;
+  inset: 0 -0.475em 0;
+  display: inline-block;
+}
+
+.underline2 {
+  border-bottom: 30px solid $sub-color-light;
   inset: 0 -0.475em 0;
   display: inline-block;
 }

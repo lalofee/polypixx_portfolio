@@ -1,17 +1,8 @@
-// PORTFOLIO HEADER //
-
-// .portfolio__head {
-// 	margin-top: $space-between;
-// 	display: grid;
-// 	grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
-// 	grid-template-rows: auto;
-// }
 
 .portfolio__title {
 	grid-column: 2/14;
 	grid-row: 18/19;
 	align-self: start;
-	color: $headline;
 	font-family: $font-heading;
 	margin-top: $space-between;
 	margin-bottom: 0;
@@ -23,7 +14,7 @@
 	font-family: $font-sub_heading;
 	font-weight: $fw-regular;
 	font-style: italic;
-	margin-bottom: $space-xxl;
+	margin-bottom: $space-between;
 	grid-column: 2/8;
 	grid-row: 19/20;
 	align-self: start;
@@ -31,21 +22,13 @@
 
 // PORTFOLIO WORK //
 
-// .work__section {
-// 	display: grid;
-// 	grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
-// 	grid-template-rows: auto;
-// 	margin-top: $space-xxl;
-// }
-
-
-
 /////////////////MASSENÜBERWACHUNG///////////////////////	
 .massen__background {
 	grid-column: 4/-1;
 	grid-row: 20/28;
-	background-color: #B6E3E9;
+	background-color: $main-color-light;
 	margin-bottom: $space-xl;
+	border-radius: 10px 0 0 10px;
 }
 
 .massen__img {
@@ -53,12 +36,11 @@
 	grid-row: 20/28;
 	justify-self: end;
 	margin-bottom: $space-xl;
-
 }
 
 .massen__text__background {
 	grid-column: 2/5;
-	grid-row: 23/26;
+	grid-row: 22/25;
 	justify-self: start;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -95,8 +77,9 @@
 .friseur__background {
 	grid-column: 1/12;
 	grid-row: 29/37;
-	background-color: #FAB989;
+	background-color: $sub-color-light;
 	margin-bottom: $space-xl;
+	border-radius: 0 10px 10px 0;
 }
 
 .friseur__img {
@@ -108,7 +91,7 @@
 
 .friseur__text__background {
 	grid-column: 10/14;
-	grid-row: 32/35;
+	grid-row: 31/34;
 	display: grid;
 	justify-self: end;
 	grid-template-columns: 1fr;
@@ -143,8 +126,9 @@
 .recipe__background {
 	grid-column: 4/-1;
 	grid-row: 37/45;
-	background-color: #d4f8dc;
+	background-color: $logo-color;
 	margin-bottom: $space-xl;
+	border-radius: 10px 0 0 10px;
 }
 
 .recipe__img {
@@ -156,7 +140,7 @@
 
 .recipe__text__background {
 	grid-column: 2/5;
-	grid-row: 40/43;
+	grid-row: 39/42;
 	justify-self: start;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -188,7 +172,6 @@
 	grid-row: 46/54;
 	background-color: $background;
 	margin-bottom: $space-xl;
-
 }
 
 .code__img {
@@ -196,12 +179,11 @@
 	grid-row: 46/54;
 	justify-self: start;
 	margin-bottom: $space-xl;
-
 }
 
 .code__text__background {
 	grid-column: 10/14;
-	grid-row: 49/52;
+	grid-row: 48/51;
 	justify-self: end;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -258,7 +240,7 @@
 
 .work__link {
 	text-decoration: none;
-	color: $black;
+	// color: $black;
 }
 
 /* Common button styles */
@@ -266,7 +248,7 @@
 	min-width: 150px;
 	max-width: 250px;
 	padding: 1em 2em;
-	border: none;
+	// border: none;
 	background: none;
 	color: inherit;
 	position: relative;
@@ -274,7 +256,7 @@
 	font-size: 1em;
 	font-family: $font-text;
 	// border-radius: 40px;
-	border: 2px solid;
+	// border: 2px solid;
 	text-transform: uppercase;
 }
 

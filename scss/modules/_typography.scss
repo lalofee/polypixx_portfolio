@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro:700|Lora:400i,800|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro:700|Lora:400i,800|Roboto&display=swap');
 
 
 $font-heading: 'Advent Pro',
@@ -7,7 +7,7 @@ sans-serif;
 $font-sub_heading: 'Lora',
 serif;
 
-$font-text: 'Open Sans',
+$font-text: 'Roboto',
 sans-serif;
 
 
@@ -28,9 +28,9 @@ $fw-bold: 700;
 $space-sm: 0.25rem;
 $space-med: 0.5rem;
 $space-lg: 1rem;
-$space-xl: 2rem;
-$space-xxl: 6rem;
-$space-between: 8rem;
+$space-xl: 6rem;
+$space-xxl: 8rem;
+$space-between: 10rem;
 
 // GRID //
 $col: calc((1200px - (11 * 10px)) / 12);
