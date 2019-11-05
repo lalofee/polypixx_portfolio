@@ -2,42 +2,30 @@ $black: #021f21;
 
 $white: #f2f9f9;  
 
-$background: #CDDDDD;
 $background-img-color: #BBC9C9;
 
 $headline: #053538;
 
-$highlight-color: #feabaf;
 
 // main color sheme  //
-$main-color: #0E8D94;
+$main-color: #19B2AF;
 $main-color-lightest: lighten($main-color, 20%);
 $main-color-lighter:  lighten($main-color, 10%);
 $main-color-light:    lighten($main-color, 5%);
 
-$main-color-dark:     darken($main-color, 30%);
+$main-color-dark:     darken($main-color, 10%);
 $main-color-darker:   darken($main-color, 50%);
 $main-color-darkest:  darken($main-color, 60%);
 
 $logo-color: #FF747A;  
-$logo-color-lightest: lighten($logo-color, 20%);
-$logo-color-lighter:  lighten($logo-color, 15%);
-$logo-color-light:    lighten($logo-color, 10%);
-
-$logo-color-dark:     darken($logo-color, 40%);
-$logo-color-darker:   darken($logo-color, 50%);
-$logo-color-darkest:  darken($logo-color, 60%);
-
+$logo-color-light: #feabaf; //underline, span
 
 $sub-color: #a9ba60;
 $sub-color-light:    lighten($sub-color, 10%);
 $sub-color-dark:     darken($sub-color, 40%);
 
-
-
-$baselight : #fec7c9;
-$middle1: #fd8f94;
-
+$background: #CDDDDD;
+$background-dark: darken($background, 10%);
 
 
 
@@ -45,6 +33,12 @@ $color3: rgba(172, 189, 186, 1);
 $color5: #a9ba60;
 
 
-
+// navigation
+/*** Color Variables ***/
+$header-bg: #CDDDDD;
+$nav-bg: #CDDDDD;
+$pink: #fa6c98;
+$aqua: #79edfc;
+$accent: #fff;
 
 

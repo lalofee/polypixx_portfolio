@@ -13,18 +13,19 @@
     color: $logo-color;
     font-family: $font-heading;
     margin-top: $space-between;
-    margin-bottom: $space-xl;
-    font-weight: $fw-bold;
+    margin-bottom: $space-lg;
+    // font-weight: $fw-bold;
+    font-size: 16vmin;
 }
 
 .contact__text {
     grid-column: 3/13;
     grid-row: 57/58;
     text-align: center;
-    justify-self: center;
     color: $black;
     font-family: $font-sub_heading;
-    margin: 1em 0 2em;
+    font-weight: $fw-regular;
+    margin: 0 0 3em;
 }
 
 .contact__email {
@@ -68,6 +69,9 @@
         transition: 1s;
     }
 }
+
+
+
 
 .title {
     color: $white;

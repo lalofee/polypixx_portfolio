@@ -1,141 +1,114 @@
-
 // top-background
 .welcome__background {
-    background-color: $main-color-lighter;
+    background-color: $main-color;
     grid-column: 1/-1;
     grid-row: 1/8;
     height: 90vh;
-    // width: 70%;
+    margin-top: 0 !important;
     display: block;
     position: relative;
     overflow: hidden;
-    background-position: center;
-    margin: 2%;
-    border-radius: 10px;;
 }
 
-// POLYPIXX-LOGO
-.welcome__logo {
-    grid-column: 9/14;
-    grid-row: 1/5;
-    justify-self: end;
-    margin-top: $space-xxl;
-    z-index: 3;
-    // background-color: $sub-color-light;
-    // padding: 5em;
-}
+    // POLYPIXX-LOGO
+    .dog__illustration {
+        grid-column: 2/14;
+        grid-row: 1/7;
+        align-self: start;
+        justify-self: center;
+        margin-top: $space-xl;
+        margin-bottom: $space-xl;
+        z-index: 3; 
+    }
 
-.welcome__text {
-    grid-column: 9/12;
-    grid-row: 5/6;
-    align-self: start;
-    font-family: $font-text;
-    color: $white !important;
-    z-index: 4;
 
-    p {
-        font-weight: $fw-regular;
-        display: inline;
+    // WEB-DESIGN+FOTO-GRAFIE
+    .about__title {
+        grid-column: 2/14;
+        grid-row: 8/13;
+        margin: 0;
+        font-family: $font-heading;
+        text-transform: uppercase;
+        line-height: .8em;
+        font-weight: $fw-bold;
+        font-size: 24vmin;
+        z-index: 5;
 
         span {
-            font-weight: $fw-bold;
+            color: $logo-color-light;
         }
     }
-}
 
-// WEB-DESIGN+FOTO-GRAFIE
-.about__title {
-    grid-column: 2/10;
-    grid-row: 7/13;
-    margin: 0;
-    padding: 0;
-    font-family: $font-heading;
-    text-transform: uppercase;
-    line-height: .8em;
-    font-weight: $fw-bold;
-    z-index: 5;
-
-    span {
-        color: $highlight-color;
-    }
-}
-
-.about__text {
-    grid-column: 3/9;
-    grid-row: 13/16;
-    font-family: $font-text;
-    margin-top: $space-xl;
-    color: $headline;
-}
-
-.underline1::after {
-    content: '';
-    display: block;
-    
-    height: 30px;
-    // width: 190px;
-    bottom: -80px;
-    left: 0;
-    background-color: $highlight-color;
-    
-}
-
-.about__img {
-    grid-column: 10/14;
-    grid-row: 15/18;
-    justify-self: end;
-}
-
-
-
-
-@media only screen and (max-width: 1200px) {
-
-    .welcome__logo {
-        margin-top: 10vh;
-        grid-column: 2/14;
-        max-width: 40vw;
+    .about__text {
+        grid-column: 3/9;
+        grid-row: 13/16;
+        font-family: $font-text;
+        margin-top: $space-xl;
+        color: $headline;
     }
 
-    .underline {
-        border-bottom: 24px solid $highlight-color;
-    }
+    .underline1::after {
+        content: '';
+        display: block;
 
-    .underline__kontakt {
-        border-bottom: 24px solid $background;
-    }
-}
+        height: 30px;
+        // width: 190px;
+        bottom: -80px;
+        left: 0;
+        background-color: $logo-color-light;
 
-@media only screen and (max-width: 768px) {
-
-    .welcome__logo {
-        max-width: 40vw;
-    }
-
-    .welcome__background {
-        height: 80vh;
-    }
-
-    .underline {
-        border-bottom: 15px solid $highlight-color;
-    }
-
-    .underline__kontakt {
-        border-bottom: 15px solid $background;
     }
 
     .about__img {
-        grid-column: 2/14;
-        grid-row: 17/22;
-        max-width: 30vw;
-        margin-top: $space-xl;
-
+        grid-column: 10/14;
+        grid-row: 15/18;
+        justify-self: end;
     }
-}
 
-@media only screen and (max-width: 480px) {
 
-    .welcome__logo {
-        width: 100vw;
+
+
+    @media only screen and (max-width: 1200px) {
+
+        // .dog__illustration {
+        //     margin-top: 10vh;
+        //     grid-column: 2/14;
+        //     max-width: 40vw;
+        // }
+
+        .underline {
+            border-bottom: 24px solid $logo-color-light;
+        }
+
+        .underline__kontakt {
+            border-bottom: 24px solid $background;
+        }
     }
-}
+
+    @media only screen and (max-width: 768px) {
+
+           .welcome__background {
+            height: 60vh;
+        }
+
+        .underline {
+            border-bottom: 15px solid $logo-color-light;
+        }
+
+        .underline__kontakt {
+            border-bottom: 15px solid $background;
+        }
+
+        .about__img {
+            grid-column: 2/14;
+            grid-row: 17/22;
+            max-width: 30vw;
+            margin-top: $space-xl;
+
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+
+      
+    }

@@ -2,6 +2,12 @@ html, body {
  height: 100%;
 }
 
+// navigation
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
 #grid-container {
   display: grid;
   grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(auto, $col)) minmax(20px, 1fr);
@@ -14,6 +20,9 @@ html, body {
 *::after,
 *::before {
   box-sizing: border-box;
+  margin: 0;
+	padding: 0;
+
 }
 
 img {
@@ -26,7 +35,7 @@ h1, h2, h3, h4, p, a {
 }
 
 .underline {
-  border-bottom: 30px solid $highlight-color;
+  border-bottom: 30px solid $logo-color-light;
   inset: 0 -0.475em 0;
   display: inline-block;
 }
@@ -42,7 +51,7 @@ p {
   line-height: 1.5em;
 }
 
-/////////////////the fluid typography from css-tricks//////////////////
+///////////////the fluid typography from css-tricks//////////////////
 $min_width: 320px;
 $max_width: 1200px;
 $min_font: 14px;
@@ -54,17 +63,17 @@ html {
 
 
 //////////////////////////////////////
-h1 {
-  font-size: 24vmin;
-}
+// h1 {
+//   font-size: 24vmin;
+// }
 
-h2 {
-  font-size: 16vmin;
-}
+// h2 {
+//   font-size: 8vmin;
+// }
 
-h3 {
-  font-size: 4vmin;
-}
+// h3 {
+//   font-size: 5vmin;
+// }
 
 h4 {
   font-size: calc(0.5rem + 2vmin);

@@ -22,11 +22,33 @@
   background-color: rgba(252, 252, 252, 0.6);
 	text-align: center;
 	padding: 2em;
-	width: 400px;
-  height: auto;
+// 	width: 400px;
+//   height: auto;
   border-radius: 10px;
-
 }
+
+///////////////// NAVIGATION //////////////////
+/*** Mixins & Default Styles ***/
+@mixin object($width, $height, $bg) {
+	width: $width;
+	height: $height;
+	background: $bg;
+}
+@mixin transPos($top, $right, $bottom, $left,$transX,$transY) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	right: $right;
+	bottom: $bottom;
+	transform: translate($transX, $transY);
+}
+/*** Centering Hack ***/
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 
 /////////////////the fluid typography from css-tricks//////////////////
 @function strip-unit($value) {
