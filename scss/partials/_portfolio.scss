@@ -38,40 +38,27 @@
 	margin-bottom: $space-xl;
 }
 
-.massen__text__background {
+.massen__text__container {
 	grid-column: 2/5;
 	grid-row: 22/25;
 	justify-self: start;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 4fr;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	@include text__background__style;
 }
 
 .massen__title {
-	grid-column: 1/2;
-	grid-row: 1;
 	@include work__title__style;
 }
 
 .massen__desc {
-	grid-column: 1/2;
-	grid-row: 2;
 	@include work__desc__style;
 }
 
 .massen__text {
-	grid-column: 1/2;
-	grid-row: 3;
 	@include work__text__style;
 }
-
-.massen__button {
-	grid-column: 1;
-	grid-row: 4;
-	justify-self: center;
-}
-
 
 /////////////////FRISEURAKADEMIE///////////////////////	
 .friseur__background {
@@ -89,38 +76,29 @@
 	margin-bottom: $space-xl;
 }
 
-.friseur__text__background {
+.friseur__text__container {
 	grid-column: 10/14;
 	grid-row: 31/34;
 	display: grid;
 	justify-self: end;
-	grid-template-columns: 1fr;
-	grid-template-rows: 4fr;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	@include text__background__style;
 }
 
 .friseur__title {
-	grid-column: 1;
-	grid-row: 1;
 	@include work__title__style;
 }
 
 .friseur__desc {
-	grid-column: 1/2;
-	grid-row: 2;
 	@include work__desc__style;
 }
 
 .friseur__text {
-	grid-column: 1/2;
-	grid-row: 3;
 	@include work__text__style;
 }
 
-.friseur__button {
-	grid-column: 10/13;
-	grid-row: 15/16;
-}
 
 /////////////////RECIPE///////////////////////	
 .recipe__background {
@@ -138,34 +116,23 @@
 	margin-bottom: $space-xl;
 }
 
-.recipe__text__background {
+.recipe__text__container {
 	grid-column: 2/5;
 	grid-row: 39/42;
 	justify-self: start;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 3fr;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	@include text__background__style;
 }
 
 .recipe__title {
-	grid-column: 1;
-	grid-row: 1;
 	@include work__title__style;
 }
 
 .recipe__text {
-	grid-column: 1;
-	grid-row: 2;
 	margin: 1em;
-
 	@include work__text__style;
-}
-
-.recipe__button {
-	grid-column: 1;
-	grid-row: 3;
-	justify-self: center;
 }
 
 /////////////////CODEFACTORY///////////////////////	
@@ -183,160 +150,27 @@
 	margin-bottom: $space-xl;
 }
 
-.code__text__background {
+.code__text__container {
 	grid-column: 10/14;
 	grid-row: 48/51;
 	justify-self: end;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 4fr;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	@include text__background__style;
 }
 
 .code__title {
-	grid-column: 10/13;
-	grid-row: 28/29;
 	@include work__title__style;
 }
 
 .code__desc {
-	grid-column: 10/13;
-	grid-row: 29/30;
 	@include work__desc__style;
 }
 
 .code__text {
-	grid-column: 10/13;
-	grid-row: 30/31;
 	@include work__text__style;
 }
-
-.code__button {
-	grid-column: 10/13;
-	grid-row: 31/32;
-	justify-self: center;
-}
-
-
-
-// Border of IGRA and Allesverwerter
-// .border1 {
-// 	border-radius: 0 25px;
-// }
-
-// .border2 {
-// 	border: 1px solid white;
-// 	border-radius: 25px 0;
-// 	margin-top: 9em;
-// 	margin-right: 2em;
-// }
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////////
-//////////////////       button styles        //////////////////
-/////////////////////////////////////////////////////////////////
-
-.work__link {
-	text-decoration: none;
-	// color: $black;
-}
-
-/* Common button styles */
-.button {
-	min-width: 150px;
-	max-width: 250px;
-	padding: 1em 2em;
-	border: none;
-	background: none;
-	color: inherit;
-	position: relative;
-	z-index: 1;
-	font-size: 1em;
-	font-family: $font-text;
-	border-radius: 40px;
-	border: 2px solid;
-	text-transform: uppercase;
-}
-
-.button:focus {
-	outline: none;
-}
-
-.button:hover {
-	cursor: pointer;
-}
-
-.button>span {
-	vertical-align: middle;
-}
-
-/* button styling */
-.button__styles {
-	background: none;
-	border: none;
-	height: 60px;
-}
-
-.button__styles.button--inverted,
-.button__styles.button--inverted-alt {
-	-webkit-transition: color 0.3s;
-	transition: color 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-}
-
-.button__styles>span {
-	padding-left: 0.35em;
-}
-
-.button__styles::before,
-.button__styles::after {
-	content: '';
-	z-index: -1;
-	border-radius: inherit;
-	pointer-events: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	// -webkit-backface-visibility: hidden;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-}
-
-///// background color /////
-.button__styles::after {
-	background-color: rgba(252, 252, 252, 0.4);
-}
-
-
-.button__styles::before {
-	border: 2px solid white;
-	opacity: 0;
-	-webkit-transform: scale3d(1.2, 1.2, 1);
-	transform: scale3d(1.2, 1.2, 1);
-}
-
-.button__styles:hover::before {
-	opacity: 1;
-	-webkit-transform: scale3d(1, 1, 1);
-	transform: scale3d(1, 1, 1);
-}
-
-.button__styles:hover::after {
-	opacity: 0;
-	-webkit-transform: scale3d(0.8, 0.8, 1);
-	transform: scale3d(0.8, 0.8, 1);
-}
-
-
 
 
 /////////////////////////////////////////////////////////////////
@@ -345,4 +179,93 @@
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 
-////////screen bigger than 1650px gehts more distance on the sides/////
+@media only screen and (max-width: 1024px) {
+	
+	.massen__text__container {
+		grid-column: 5/14;
+		grid-row: 27/28;
+		text-align: left;
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: row;
+		padding: 0.8em;
+		margin-bottom: $space-lg;
+	}
+	.massen__title {
+		margin-bottom: 0.5em;
+	}
+	.massen__desc {
+		margin: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	
+	.friseur__text__container {
+		grid-column: 2/10;
+		grid-row: 36/37;
+		justify-self: start;
+		text-align: left;
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: row;
+		padding: 0.8em;
+		margin-bottom: $space-lg;
+	}
+	.friseur__title {
+		margin-bottom: 0.5em;
+	}
+	.friseur__desc {
+		margin: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	
+	.recipe__text__container {
+		grid-column: 5/14;
+		grid-row: 44/45;
+		justify-self: end;
+		text-align: left;
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: row;
+		padding: 0.8em;
+		margin-bottom: $space-lg;
+	}
+	.recipe__title {
+		margin-bottom: 0.5em;
+	}
+	.recipe__text {
+		margin: 0!important;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.code__text__container {
+		grid-column: 2/10;
+		grid-row: 53/54;
+		justify-self: start;
+		text-align: left;
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: row;
+		padding: 0.8em;
+		margin-bottom: $space-lg;
+	}
+	.code__title {
+		margin-bottom: 0.5em;
+	}
+	.code__desc {
+		margin: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.work__background {
+		grid-column: 2/14;
+	}
+	.image {
+		grid-column: 2/14;
+	}
+}

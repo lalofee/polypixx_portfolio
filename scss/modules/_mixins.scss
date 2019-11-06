@@ -2,7 +2,7 @@
 @mixin work__title__style {
   font-family: $font-sub_heading;
   font-weight: $fw-extrabold;
-  margin: 0;
+  // margin: 0;
 }
 
 @mixin work__desc__style {
