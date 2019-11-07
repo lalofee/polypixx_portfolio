@@ -3,7 +3,6 @@
      background-color: $color5;
      grid-column: 1/-1;
      grid-row: 55/60;
- 
 }
 
 .contact__title {
@@ -14,14 +13,14 @@
     font-family: $font-heading;
     margin-top: $space-between;
     margin-bottom: $space-lg;
-    // font-weight: $fw-bold;
-    font-size: 16vmin;
 }
 
 .contact__text {
     grid-column: 3/13;
     grid-row: 57/58;
     text-align: center;
+    justify-self: center;
+    width: 58vw;
     color: $black;
     font-family: $font-sub_heading;
     font-weight: $fw-regular;
@@ -70,9 +69,6 @@
     }
 }
 
-
-
-
 .title {
     color: $white;
     font-family: $font-sub_heading;
@@ -87,7 +83,36 @@
     text-align: center;
 }
 
+@media only screen and (max-width: 1024px) {
+    .contact__background {
+        margin-top: $space-xxl;
+    }
+}
 
+@media only screen and (max-width: 700px) {
+    .contact__background {
+        grid-row: 55/62;
+        padding-bottom: $space-between;
+    }
+    .contact__email {
+        grid-column: 2/14;
+        grid-row: 59/60;
+        margin-bottom: $space-lg;
+        justify-self: center;
+    }
+    .contact__github {
+        grid-column: 2/14;
+        grid-row: 60/61;
+        margin-bottom: $space-lg;
+        justify-self: center;
+    }
+    .contact__linkedin {
+        grid-column: 2/14;
+        grid-row: 61/62;
+        margin-bottom: $space-lg;
+        justify-self: center;
+    }
+}
 
 
 ////////////////// footer /////////////////////////////

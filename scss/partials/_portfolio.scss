@@ -264,8 +264,37 @@
 @media only screen and (max-width: 550px) {
 	.work__background {
 		grid-column: 2/14;
+		border-radius: 10px;
 	}
 	.image {
 		grid-column: 2/14;
+		margin: 3rem 0 10rem 0;
 	}
+	.text__container {
+		grid-column: 2/14;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	
+	.portfolio__title {
+		grid-column: 2/14;
+		grid-row: 18/19;
+		font-family: $font-heading;
+		margin-top: $space-xl;
+		margin-bottom: 0;
+		font-weight: $fw-bold;
+	}
+	
+	.portfolio__text {
+		color: $black;
+		font-family: $font-sub_heading;
+		font-weight: $fw-regular;
+		margin-bottom: $space-lg;
+		grid-column: 2/14;
+		grid-row: 19/20;
+		align-self: start;
+		width: 58vw;
+	}
+	
 }

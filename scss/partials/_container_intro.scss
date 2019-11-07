@@ -31,7 +31,6 @@
         text-transform: uppercase;
         line-height: .8em;
         font-weight: $fw-bold;
-        font-size: 24vmin;
         z-index: 5;
 
         span {
@@ -50,7 +49,6 @@
     .underline1::after {
         content: '';
         display: block;
-
         height: 30px;
         // width: 190px;
         bottom: -80px;
@@ -70,12 +68,6 @@
 
     @media only screen and (max-width: 1200px) {
 
-        // .dog__illustration {
-        //     margin-top: 10vh;
-        //     grid-column: 2/14;
-        //     max-width: 40vw;
-        // }
-
         .underline {
             border-bottom: 24px solid $logo-color-light;
         }
@@ -85,11 +77,19 @@
         }
     }
 
+    @media only screen and (max-width: 1024px) {
+        .about__img {
+            grid-column: 2/14;
+            grid-row: 17/18;
+            margin-top: $space-xl;
+        }
+    }
+
     @media only screen and (max-width: 768px) {
 
-           .welcome__background {
-            height: 60vh;
-        }
+        //    .welcome__background {
+        //     height: 60vh;
+        // }
 
         .underline {
             border-bottom: 15px solid $logo-color-light;
@@ -104,11 +104,24 @@
             grid-row: 17/22;
             max-width: 30vw;
             margin-top: $space-xl;
-
         }
     }
 
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 360px) {
 
-      
+      .about__title {
+          grid-row: 7/13;
+      }
+      .about__text {
+          grid-column: 2/14;
+          text-align: left;
+          z-index: 2;
+      }
+      .about__img {
+        grid-column: 2/14;
+        grid-row: 17/18;
+        max-width: 70vw;
+        justify-self: center;
+    }
+
     }

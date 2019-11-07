@@ -8,7 +8,7 @@ $( () => {
 	});
 	
 	//Click Logo To Scroll To Top
-	$('#logo').on('click', () => {
+	$('#word-mark').on('click', () => {
 		$('html,body').animate({
 			scrollTop: 0
 		},500);

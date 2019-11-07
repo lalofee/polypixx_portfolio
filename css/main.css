@@ -331,8 +331,17 @@ html {
     html {
       font-size: 16px; } }
 
+h1 {
+  font-size: 24vmin; }
+
+h2 {
+  font-size: calc(0.5rem + 18vmin); }
+
+h3 {
+  font-size: calc(0.5rem + 8vmin); }
+
 h4 {
-  font-size: calc(0.5rem + 2vmin); }
+  font-size: calc(0.5rem + 4vmin); }
 
 .welcome__background {
   background-color: #19B2AF;
@@ -361,7 +370,6 @@ h4 {
   text-transform: uppercase;
   line-height: .8em;
   font-weight: 700;
-  font-size: 24vmin;
   z-index: 5; }
   .about__title span {
     color: #feabaf; }
@@ -392,9 +400,13 @@ h4 {
   .underline__kontakt {
     border-bottom: 24px solid #CDDDDD; } }
 
+@media only screen and (max-width: 1024px) {
+  .about__img {
+    grid-column: 2/14;
+    grid-row: 17/18;
+    margin-top: 6rem; } }
+
 @media only screen and (max-width: 768px) {
-  .welcome__background {
-    height: 60vh; }
   .underline {
     border-bottom: 15px solid #feabaf; }
   .underline__kontakt {
@@ -404,6 +416,19 @@ h4 {
     grid-row: 17/22;
     max-width: 30vw;
     margin-top: 6rem; } }
+
+@media only screen and (max-width: 360px) {
+  .about__title {
+    grid-row: 7/13; }
+  .about__text {
+    grid-column: 2/14;
+    text-align: left;
+    z-index: 2; }
+  .about__img {
+    grid-column: 2/14;
+    grid-row: 17/18;
+    max-width: 70vw;
+    justify-self: center; } }
 
 .portfolio__title {
   grid-column: 2/14;
@@ -644,9 +669,31 @@ h4 {
 
 @media only screen and (max-width: 550px) {
   .work__background {
-    grid-column: 2/14; }
+    grid-column: 2/14;
+    border-radius: 10px; }
   .image {
+    grid-column: 2/14;
+    margin: 3rem 0 10rem 0; }
+  .text__container {
     grid-column: 2/14; } }
+
+@media only screen and (max-width: 360px) {
+  .portfolio__title {
+    grid-column: 2/14;
+    grid-row: 18/19;
+    font-family: "Advent Pro", sans-serif;
+    margin-top: 6rem;
+    margin-bottom: 0;
+    font-weight: 700; }
+  .portfolio__text {
+    color: #021f21;
+    font-family: "Lora", serif;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    grid-column: 2/14;
+    grid-row: 19/20;
+    align-self: start;
+    width: 58vw; } }
 
 .contact__background {
   background-color: #a9ba60;
@@ -660,13 +707,14 @@ h4 {
   color: #FF747A;
   font-family: "Advent Pro", sans-serif;
   margin-top: 10rem;
-  margin-bottom: 1rem;
-  font-size: 16vmin; }
+  margin-bottom: 1rem; }
 
 .contact__text {
   grid-column: 3/13;
   grid-row: 57/58;
   text-align: center;
+  justify-self: center;
+  width: 58vw;
   color: #021f21;
   font-family: "Lora", serif;
   font-weight: 400;
@@ -717,6 +765,30 @@ h4 {
   text-decoration: none;
   text-align: center; }
 
+@media only screen and (max-width: 1024px) {
+  .contact__background {
+    margin-top: 8rem; } }
+
+@media only screen and (max-width: 700px) {
+  .contact__background {
+    grid-row: 55/62;
+    padding-bottom: 10rem; }
+  .contact__email {
+    grid-column: 2/14;
+    grid-row: 59/60;
+    margin-bottom: 1rem;
+    justify-self: center; }
+  .contact__github {
+    grid-column: 2/14;
+    grid-row: 60/61;
+    margin-bottom: 1rem;
+    justify-self: center; }
+  .contact__linkedin {
+    grid-column: 2/14;
+    grid-row: 61/62;
+    margin-bottom: 1rem;
+    justify-self: center; } }
+
 .footer {
   height: 5em;
   color: #f2f9f9;
@@ -753,8 +825,10 @@ nav {
   nav.navShadow {
     box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.2);
     height: 100px; }
-    nav.navShadow #word-mark {
-      opacity: 0; }
+    nav.navShadow #word-mark h3 {
+      font-size: 6vmin;
+      transition: all 0.3s;
+      cursor: pointer; }
 
 #menu, ul {
   display: flex;
@@ -793,7 +867,6 @@ li {
     text-decoration: none; }
   li a:hover {
     color: #f2f9f9;
-    border-bottom: 2px solid white;
     transition: 1s; }
 
 #menu-toggle {

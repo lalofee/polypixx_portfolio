@@ -62,19 +62,19 @@ html {
 }
 
 
-//////////////////////////////////////
-// h1 {
-//   font-size: 24vmin;
-// }
+////////////////////////////////////
+h1 {
+  font-size: 24vmin;
+}
 
-// h2 {
-//   font-size: 8vmin;
-// }
+h2 {
+  font-size: calc(0.5rem + 18vmin);
+}
 
-// h3 {
-//   font-size: 5vmin;
-// }
+h3 {
+  font-size: calc(0.5rem + 8vmin);
+}
 
 h4 {
-  font-size: calc(0.5rem + 2vmin);
+  font-size: calc(0.5rem + 4vmin);
 }
